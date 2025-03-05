@@ -1,0 +1,825 @@
+/* First Full-Screen Block */
+.app-development-container {
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f8f9fb; /* Light background */
+  position: relative;
+}
+
+.app-development-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire area */
+  object-position: center; /* Ensures the image is centered */
+  transition: transform 0.6s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+/* Smooth zoom effect on hover */
+.app-development-image:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+
+/* Fade-in animation on page load */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: scale(1.1);
+  }
+  to {
+      opacity: 1;
+      transform: scale(1);
+  }
+}
+
+.app-development-image {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-development-container {
+      height: 40vh; /* Reduced height for mobile */
+  }
+
+  .app-development-image {
+      width: 100%; /* Ensure the image takes full width */
+      height: 100%; /* Ensure the image takes full height */
+      object-fit: cover; /* Ensure the image covers the container */
+      object-position: top center; /* Adjust to show the top part of the image */
+  }
+
+  /* Disable hover effects on mobile */
+  .app-development-image:hover {
+      transform: scale(1); /* No zoom effect on mobile */
+      opacity: 1; /* No opacity change on mobile */
+  }
+}
+/* Second Full-Screen Block */
+.app-development-block2 {
+  width: 100%;
+  min-height: 100vh; /* Use min-height to avoid overlap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff; /* Light grey for a modern feel */
+  padding: 60px 20px; /* Adjusted padding for mobile */
+}
+
+/* Content container */
+.block2-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  gap: 40px; /* Reduced gap for mobile */
+}
+
+/* Left-side Image */
+.block2-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.block2-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Image hover effect */
+.block2-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Right-side Text */
+.block2-text {
+  flex: 1;
+  padding: 20px;
+  text-align: center; /* Center align text */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Heading with blue color, adjusted for two-line fit */
+.block2-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0056b3;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.3;
+  max-width: 550px;
+}
+
+/* Paragraph text with better readability */
+.block2-text p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  font-family: "Roboto", sans-serif;
+  max-width: 550px;
+  margin-bottom: 30px;
+}
+
+/* CTA Button */
+.consultation-button {
+  background-color: #0056b3;
+  color: #fff;
+  font-size: 1.1rem;
+  padding: 14px 40px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 10px 30px rgba(0, 86, 179, 0.3);
+  text-align: center;
+}
+
+/* Button hover effect */
+.consultation-button:hover {
+  background-color: #003d80;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(0, 86, 179, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .block2-content {
+      flex-direction: column-reverse;
+      text-align: center;
+      gap: 30px; /* Reduced gap for mobile */
+  }
+
+  .block2-text {
+      padding: 0;
+      text-align: center;
+  }
+
+  .block2-text h2 {
+      font-size: 2rem; /* Smaller font size for mobile */
+      max-width: 90%;
+      margin: 0 auto 15px;
+  }
+
+  .block2-text p {
+      font-size: 1rem; /* Smaller font size for mobile */
+      max-width: 90%;
+      margin: 0 auto 20px;
+      line-height: 1.6; /* Adjusted line height for mobile */
+  }
+
+  .block2-image img {
+      max-width: 90%; /* Slightly smaller image for mobile */
+  }
+
+  .consultation-button {
+      padding: 12px 30px; /* Smaller padding for mobile */
+      font-size: 1rem; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .app-development-block2 {
+      padding: 40px 15px; /* Further reduced padding for smaller mobile screens */
+  }
+
+  .block2-text h2 {
+      font-size: 1.8rem; /* Smaller font size for smaller mobile screens */
+  }
+
+  .block2-text p {
+      font-size: 0.9rem; /* Smaller font size for smaller mobile screens */
+  }
+
+  .consultation-button {
+      padding: 10px 25px; /* Smaller padding for smaller mobile screens */
+      font-size: 0.9rem; /* Smaller font size for smaller mobile screens */
+  }
+}
+
+
+
+
+/* Block 3 - Services Section */
+.app-development-block3 {
+    background: linear-gradient(180deg, #ffffff, #e3f2fd); /* Light Blue Gradient */
+    padding: 80px 10%;
+    text-align: center;
+}
+
+/* Heading Styling */
+.block3-heading {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4a92df;
+    margin-bottom: 70px; /* Increased margin for spacing */
+    font-family: "Poppins", sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.block3-heading::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #0056b3;
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px; /* Increased gap between service cards */
+    margin-top: 20px; /* Added extra space between heading & services */
+}
+
+/* Service Card */
+.service-card {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 35px; /* Slightly increased padding */
+    box-shadow: 0 10px 25px rgba(0, 86, 179, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 86, 179, 0.4);
+    border-color: #0056b3;
+}
+
+/* Icon Styling */
+.service-icon {
+    font-size: 3rem;
+    color: #0056b3;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.service-card:hover .service-icon {
+    transform: rotateY(360deg);
+}
+
+/* Service Title */
+.service-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #003c8f;
+    margin-bottom: 15px;
+}
+
+/* Service Description */
+.service-description {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+}
+
+/* Animation Effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card {
+    animation: fadeIn 0.8s ease-in-out both;
+}
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-development-block3 {
+      padding: 40px 5%; /* Reduced padding for mobile */
+  }
+
+  .block3-heading {
+      font-size: 2rem; /* Smaller font size for mobile */
+      margin-bottom: 40px; /* Reduced margin for mobile */
+  }
+
+  .block3-heading::after {
+      width: 50px; /* Smaller underline for mobile */
+      height: 3px; /* Thinner underline for mobile */
+      bottom: -10px; /* Adjust position for mobile */
+  }
+
+  .services-grid {
+      grid-template-columns: 1fr; /* Single column layout for mobile */
+      gap: 20px; /* Reduced gap for mobile */
+      margin-top: 10px; /* Reduced margin for mobile */
+  }
+
+  .service-card {
+      padding: 25px; /* Reduced padding for mobile */
+  }
+
+  .service-icon {
+      font-size: 2.5rem; /* Smaller icon size for mobile */
+      margin-bottom: 15px; /* Reduced margin for mobile */
+  }
+
+  .service-title {
+      font-size: 1.4rem; /* Smaller font size for mobile */
+      margin-bottom: 10px; /* Reduced margin for mobile */
+  }
+
+  .service-description {
+      font-size: 1rem; /* Smaller font size for mobile */
+      line-height: 1.5; /* Adjusted line height for mobile */
+  }
+}
+
+
+
+
+
+
+
+.app-development-block4 {
+    background: linear-gradient(135deg, #ffffff 0%, #f1f1f1 100%);
+    padding: 100px 30px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 15px;
+  }
+  
+  .block4-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .block4-heading {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #0f689b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+  }
+  
+  .block4-heading:after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 2px;
+    background-color: #0066ff;
+  }
+  
+  .block4-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 60px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    padding: 30px;
+  }
+  
+  .step {
+    background: #fff;
+    padding: 40px 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    transform: translateY(0);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  
+  .step:before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: #003cff;
+    opacity: 0.15;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    animation: pulse 5s infinite;
+  }
+  
+  .step:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  }
+  
+  .step-icon {
+    font-size: 50px;
+    color: #008cff;
+    margin-bottom: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .step:hover .step-icon {
+    transform: rotate(360deg);
+  }
+  
+  .step h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #0066ff;
+    margin: 15px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .step h5 {
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+  
+  .step p {
+    color: #777;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .step:hover h4 {
+    color: #3c6ae7;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: translateX(-50%) scale(0.5);
+      opacity: 0.15;
+    }
+    50% {
+      transform: translateX(-50%) scale(1);
+      opacity: 0.3;
+    }
+    100% {
+      transform: translateX(-50%) scale(0.5);
+      opacity: 0.15;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .process-steps {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  
+    .step {
+      padding: 35px 25px;
+    }
+  }
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-development-block4 {
+      padding: 60px 20px; /* Reduced padding for mobile */
+      border-radius: 10px; /* Smaller border radius for mobile */
+  }
+
+  .block4-heading {
+      font-size: 2rem; /* Smaller font size for mobile */
+      margin-bottom: 20px; /* Reduced margin for mobile */
+  }
+
+  .block4-heading:after {
+      width: 50px; /* Smaller underline for mobile */
+      height: 2px; /* Thinner underline for mobile */
+      bottom: -5px; /* Adjust position for mobile */
+  }
+
+  .block4-description {
+      font-size: 1rem; /* Smaller font size for mobile */
+      margin-bottom: 40px; /* Reduced margin for mobile */
+      line-height: 1.5; /* Adjusted line height for mobile */
+  }
+
+  .process-steps {
+      grid-template-columns: 1fr; /* Single column layout for mobile */
+      gap: 20px; /* Reduced gap for mobile */
+      padding: 10px; /* Reduced padding for mobile */
+  }
+
+  .step {
+      padding: 25px 20px; /* Reduced padding for mobile */
+  }
+
+  .step-icon {
+      font-size: 40px; /* Smaller icon size for mobile */
+      margin-bottom: 15px; /* Reduced margin for mobile */
+  }
+
+  .step h4 {
+      font-size: 1.8rem; /* Smaller font size for mobile */
+      margin: 10px 0; /* Reduced margin for mobile */
+  }
+
+  .step h5 {
+      font-size: 1.2rem; /* Smaller font size for mobile */
+      margin-bottom: 10px; /* Reduced margin for mobile */
+  }
+
+  .step p {
+      font-size: 1rem; /* Smaller font size for mobile */
+      line-height: 1.5; /* Adjusted line height for mobile */
+  }
+}
+
+
+/* Fifth Block - Contact Us Section */
+.app-development-block5 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 30px;
+  background-color: #fff; /* Pure white background */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.block5-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.block5-text {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+}
+
+.block5-text h2 {
+  font-size: 2.8rem; /* Slightly larger for more emphasis */
+  font-weight: 600;
+  color: #0056b3; /* Professional blue */
+  margin-bottom: 20px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  text-transform: capitalize; /* For a more professional look */
+}
+
+.block5-text p {
+  font-size: 1.15rem;
+  color: #6c757d; /* Light grey text for better contrast */
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.contact-button {
+  background-color: #0056b3; /* Professional blue */
+  color: #fff;
+  padding: 14px 35px;
+  font-size: 1.15rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Button shadow for a more modern look */
+}
+
+.contact-button:hover {
+  background-color: #004085; /* Darker blue for hover effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow on hover */
+}
+
+.block5-image {
+  flex: 1;
+  padding: 20px;
+  text-align: right;
+  margin-left: 40px; /* Added margin to create more gap between image and text */
+}
+
+.block5-image img {
+  width: 100%;
+  height: auto;
+  max-width: 650px;
+  border-radius: 10px;
+  /* Soft shadow for images */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .app-development-block5 {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 20px; /* Reduced padding for mobile */
+  }
+
+  .block5-text {
+      max-width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .block5-text h2 {
+      font-size: 2rem; /* Smaller font size for mobile */
+      margin-bottom: 15px; /* Reduced margin for mobile */
+  }
+
+  .block5-text p {
+      font-size: 1rem; /* Smaller font size for mobile */
+      margin-bottom: 20px; /* Reduced margin for mobile */
+      line-height: 1.5; /* Adjusted line height for mobile */
+  }
+
+  .contact-button {
+      padding: 12px 30px; /* Smaller padding for mobile */
+      font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .block5-image {
+      margin-left: 0; /* Reset margin on smaller screens */
+      margin-top: 20px; /* Added margin on top for spacing */
+      padding: 0; /* Remove padding for mobile */
+  }
+
+  .block5-image img {
+      max-width: 100%;
+      margin-top: 20px;
+      border-radius: 8px; /* Slightly smaller border radius for mobile */
+  }
+}
+
+
+
+  /* Technologies Section */
+.technologies-container {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #f9f9f9;
+  }
+  
+  .technologies-heading {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .technologies-subheading {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+  }
+  
+  .technologies-swiper {
+    width: 100%;
+    padding: 2rem 0;
+  }
+  
+  .technology-card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px; /* Fixed height for consistency */
+  }
+  
+  .technology-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .technology-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #007bff; /* Blue color for icons */
+  }
+  
+  .technology-name {
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  /* Swiper Styles */
+  .swiper-slide {
+    width: 300px !important; /* Fixed width for each slide */
+    margin: 0 10px; /* Space between slides */
+  }
+  
+  .swiper-pagination-bullet {
+    background-color: #007bff !important; /* Blue color for pagination bullets */
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #007bff !important; /* Blue color for navigation arrows */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .technologies-heading {
+      font-size: 2rem;
+    }
+  
+    .technologies-subheading {
+      font-size: 1rem;
+    }
+  
+    .technology-card {
+      height: 180px; /* Slightly smaller cards for mobile */
+    }
+  
+    .technology-icon {
+      font-size: 2.5rem;
+    }
+  
+    .technology-name {
+      font-size: 1rem;
+    }
+  }
+  /* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .technologies-container {
+      padding: 2rem 1rem; /* Reduced padding for mobile */
+  }
+
+  .technologies-heading {
+      font-size: 1.8rem; /* Smaller font size for mobile */
+      margin-bottom: 0.8rem; /* Reduced margin for mobile */
+  }
+
+  .technologies-subheading {
+      font-size: 0.9rem; /* Smaller font size for mobile */
+      margin-bottom: 1.5rem; /* Reduced margin for mobile */
+  }
+
+  .technologies-swiper {
+      padding: 1rem 0; /* Reduced padding for mobile */
+  }
+
+  .technology-card {
+      height: 150px; /* Smaller height for mobile */
+      padding: 1rem; /* Reduced padding for mobile */
+  }
+
+  .technology-icon {
+      font-size: 2rem; /* Smaller icon size for mobile */
+      margin-bottom: 0.8rem; /* Reduced margin for mobile */
+  }
+
+  .technology-name {
+      font-size: 0.9rem; /* Smaller font size for mobile */
+  }
+
+  .swiper-slide {
+      width: 250px !important; /* Smaller slide width for mobile */
+      margin: 0 5px; /* Reduced space between slides for mobile */
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+      display: none; /* Hide navigation arrows on mobile */
+  }
+}

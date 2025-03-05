@@ -1,0 +1,448 @@
+/* Block 1: Full Page Image */
+.unique-block1 {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Styling */
+.unique-block1-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures full coverage without distortion */
+  object-position: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Smooth Zoom Effect for Larger Screens */
+@media (min-width: 769px) {
+  .unique-block1-image {
+      animation: zoomIn 5s ease-in-out infinite alternate;
+  }
+  
+  .unique-block1:hover .unique-block1-image {
+      transform: scale(1.1);
+  }
+
+  /* Keyframes for zoom animation */
+  @keyframes zoomIn {
+      0% {
+          transform: scale(1);
+      }
+      100% {
+          transform: scale(1.05);
+      }
+  }
+}
+
+/* Mobile & Tablet Optimization */
+@media (max-width: 768px) {
+  .unique-block1 {
+      height: 80vh; /* Adjusted height for better mobile experience */
+  }
+
+  .unique-block1-image {
+      animation: none; /* Remove zoom animation for mobile */
+  }
+}
+
+
+
+
+
+  /* Block 2: Text and Image Section */
+.unique-block2 {
+    padding: 80px 20px;
+    background: #f9f9f9; /* Light background */
+    color: #333; /* Dark text for contrast */
+  }
+  
+  .unique-block2-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .unique-block2-left {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .unique-block2-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0077b6; /* Dark blue for heading */
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .unique-block2-description {
+    font-size: 1.1rem;
+    color: #555; /* Dark gray for text */
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .unique-block2-button {
+    background: #00bcd4; /* Light blue for button */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .unique-block2-button:hover {
+    background: #0097a7; /* Darker blue on hover */
+  }
+  
+  .unique-block2-button-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .unique-block2-right {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .unique-block2-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+  }
+  
+  .unique-block2-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .unique-block2-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .unique-block2-left {
+      max-width: 100%;
+    }
+  
+    .unique-block2-heading {
+      font-size: 2rem;
+    }
+  
+    .unique-block2-description {
+      font-size: 1rem;
+    }
+  
+    .unique-block2-button {
+      padding: 12px 25px;
+      font-size: 0.9rem;
+    }
+  }
+
+
+
+
+
+  /* Block 3: Graphic Design Services */
+.unique-block3 {
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8ff); /* Light blue gradient */
+    color: #333;
+    text-align: center;
+    position: relative;
+}
+
+/* Heading Styling */
+.unique-block3-heading {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0056b3; /* Dark blue */
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    position: relative;
+    display: inline-block;
+}
+
+.unique-block3-heading::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: #00bcd4;
+    margin: 10px auto;
+    border-radius: 2px;
+}
+
+/* Subheading */
+.unique-block3-subheading {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #0097a7; /* Deep teal */
+    margin-bottom: 40px;
+}
+
+/* Description */
+.unique-block3-description {
+    font-size: 1.2rem;
+    color: #444;
+    max-width: 750px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+/* Grid Layout */
+.unique-block3-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Card */
+.unique-block3-service {
+    background: white;
+    padding: 40px 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.unique-block3-service::before {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 50px;
+    height: 50px;
+    background: #00bcd4;
+    border-radius: 50%;
+    opacity: 0.2;
+    transition: all 0.4s ease-in-out;
+}
+
+.unique-block3-service:hover::before {
+    width: 120%;
+    height: 120%;
+    top: -20%;
+    left: -20%;
+    opacity: 0.1;
+}
+
+.unique-block3-service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Icon Styling */
+.unique-block3-icon {
+    font-size: 3rem;
+    color: #0077b6;
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.unique-block3-service:hover .unique-block3-icon {
+    color: #00bcd4;
+    transform: rotate(10deg);
+}
+
+/* Title */
+.unique-block3-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 12px;
+}
+
+/* Description */
+.unique-block3-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .unique-block3-heading {
+        font-size: 2.5rem;
+    }
+
+    .unique-block3-subheading {
+        font-size: 1.8rem;
+    }
+
+    .unique-block3-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .unique-block3-heading {
+        font-size: 2.2rem;
+    }
+
+    .unique-block3-subheading {
+        font-size: 1.6rem;
+    }
+
+    .unique-block3-description {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+/* Block 4: Get a Better Design for Less */
+.unique-block4 {
+    padding: 80px 20px;
+    background: #ffffff; /* White background */
+    color: #333; /* Dark text for contrast */
+  }
+  
+  .unique-block4-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+  }
+  
+  .unique-block4-left {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .unique-block4-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #0077b6; /* Dark blue for heading */
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .unique-block4-description {
+    font-size: 1.1rem;
+    color: #555; /* Dark gray for text */
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .unique-block4-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+  
+  .unique-block4-step {
+    background: #f9f9f9; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #00bcd4; /* Light blue accent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .unique-block4-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .unique-block4-step-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #0077b6; /* Dark blue for titles */
+    margin-bottom: 10px;
+  }
+  
+  .unique-block4-step-description {
+    font-size: 1rem;
+    color: #555; /* Dark gray for descriptions */
+    line-height: 1.5;
+  }
+  
+  .unique-block4-button {
+    background: #00bcd4; /* Light blue for button */
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .unique-block4-button:hover {
+    background: #0097a7; /* Darker blue on hover */
+  }
+  
+  .unique-block4-button-link {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .unique-block4-right {
+    flex: 1;
+    max-width: 600px;
+  }
+  
+  .unique-block4-image {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease;
+  }
+  
+  .unique-block4-image:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .unique-block4-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .unique-block4-left {
+      max-width: 100%;
+    }
+  
+    .unique-block4-heading {
+      font-size: 2rem;
+    }
+  
+    .unique-block4-description {
+      font-size: 1rem;
+    }
+  
+    .unique-block4-step {
+      text-align: left;
+    }
+  
+    .unique-block4-button {
+      padding: 12px 25px;
+      font-size: 0.9rem;
+    }
+  }

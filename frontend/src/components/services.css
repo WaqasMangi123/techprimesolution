@@ -1,0 +1,2014 @@
+/* First Block: Full-Page Image with Animation */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    background-color: #ffffff; /* Light gray background */
+    overflow: hidden; /* Ensures no scrollbars */
+    position: relative;
+}
+
+/* Ensures the image covers the container while maintaining aspect ratio */
+.services-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0; /* Start with the image invisible */
+    animation: fadeIn 2s ease-in-out forwards; /* Fade-in animation */
+    transition: transform 0.5s ease-in-out; /* Smooth scaling transition */
+}
+
+/* Hover effect to scale the image slightly */
+.image-container:hover .services-image {
+    transform: scale(1.05); /* Slightly zoom in on hover */
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(1.1); /* Start slightly zoomed out */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Gradient overlay for a more dynamic look */
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.3) 0%,
+        rgba(0, 0, 0, 0) 100%
+    );
+    z-index: 1; /* Ensure the overlay is above the image */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .image-container {
+        height: 70vh; /* Reduce height for smaller screens */
+    }
+
+    .services-image {
+        object-fit: contain; /* Ensure the full image is visible */
+    }
+
+    .image-container::before {
+        background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.4) 0%,
+            rgba(0, 0, 0, 0.1) 100%
+        );
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container {
+        height: 60vh; /* Further reduce height for very small screens */
+    }
+
+    .services-image {
+        object-fit: cover; /* Keep the cover effect for better appearance */
+    }
+
+    .image-container:hover .services-image {
+        transform: none; /* Disable hover zoom on small screens */
+    }
+}
+
+/* Second Block: Services Content */
+.services-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 40px 20px;
+    box-sizing: border-box;
+  }
+  
+  .services-content {
+    text-align: center;
+    max-width: 1200px;
+    width: 120%;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+  
+  .services-content:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Heading */
+  .services-heading {
+    font-size: 2.5rem;
+    color: #0073e6;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    line-height: 1.3;
+  }
+  
+  /* Description */
+  .services-description {
+    font-size: 1.1rem;
+    color: #333333;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    text-align: center; /* Changed from justify to center */
+    letter-spacing: 0.5px;
+}
+
+  
+  /* Stats Container */
+  .stats-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  /* Stat Item */
+  .stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+    padding: 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .stat-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Icon Style */
+  .stat-icon {
+    font-size: 3rem;
+    color: #0073e6;
+    margin-bottom: 10px;
+  }
+  
+  /* Stat Number with Plus */
+  .stat-number {
+    font-size: 2.5rem;
+    color: #0073e6;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .stat-number::after {
+    content: '+';
+    font-size: 1.8rem;
+    color: #0073e6;
+    margin-left: 4px;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* Stat Label */
+  .stat-label {
+    font-size: 1rem;
+    color: #666666;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+  
+  /* Animation for Stat Numbers */
+  @keyframes countUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .stat-number.animated {
+    animation: countUp 1s ease-in-out forwards;
+  }
+  
+
+
+
+
+
+
+  /* Block 3: Web Development Services */
+.webdev-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Left Side Content */
+.webdev-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.webdev-heading {
+    font-size: 3rem;
+    color: #0073e6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.webdev-description {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.webdev-button {
+    padding: 12px 30px;
+    background-color: #0073e6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.webdev-button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Right Side Image Slider */
+.webdev-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+}
+
+.slider-image {
+    width: 100%;
+    height: 400px; /* Set fixed height for all images */
+    object-fit: cover; /* Ensures images maintain aspect ratio while covering the entire box */
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */
+    border-radius: 15px;
+    position: absolute; /* Overlap images */
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1; /* Make visible */
+    position: relative; /* Show the active image on top */
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/* ========== Responsive Design ========== */
+@media (max-width: 1024px) {
+    .webdev-block {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 15px;
+    }
+
+    .webdev-content {
+        padding: 20px;
+    }
+
+    .webdev-heading {
+        font-size: 2.5rem;
+    }
+
+    .webdev-description {
+        font-size: 1.1rem;
+    }
+
+    .webdev-button {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+    .webdev-slider {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .webdev-heading {
+        font-size: 2rem;
+    }
+
+    .webdev-description {
+        font-size: 1rem;
+    }
+
+    .webdev-button {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .slider-image {
+        height: 300px; /* Reduce image height on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .webdev-heading {
+        font-size: 1.8rem;
+    }
+
+    .webdev-description {
+        font-size: 1rem;
+    }
+
+    .webdev-button {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .webdev-slider {
+        max-width: 100%;
+    }
+
+    .slider-image {
+        height: 250px; /* Reduce height for smaller screens */
+    }
+}
+
+
+
+
+
+
+/* App Development Block */
+.appdev-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Left Side Content */
+.appdev-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.appdev-heading {
+    font-size: 3rem;
+    color: #0073e6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.appdev-description {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.learn-more-btn {
+    padding: 12px 30px;
+    background-color: #0073e6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Right Side Image Slider */
+.appdev-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px; /* Adjust this height as needed */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */
+    position: absolute; /* Overlap images */
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1; /* Make visible */
+    position: relative; /* Show the active image on top */
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .appdev-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .appdev-content {
+        padding: 20px;
+    }
+
+    .appdev-heading {
+        font-size: 2.5rem;
+    }
+
+    .appdev-description {
+        font-size: 1.1rem;
+    }
+
+    .appdev-slider {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .appdev-block {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .appdev-content {
+        padding: 15px;
+    }
+
+    .appdev-heading {
+        font-size: 2rem;
+    }
+
+    .appdev-description {
+        font-size: 1rem;
+    }
+
+    .learn-more-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .slider-image-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .appdev-heading {
+        font-size: 1.8rem;
+    }
+
+    .appdev-description {
+        font-size: 0.9rem;
+    }
+
+    .learn-more-btn {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    .slider-image-container {
+        height: 250px;
+    }
+}
+
+
+
+
+
+/* Desktop Application Block */
+.victorian-app-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Left Side Content (Text) */
+.renaissance-app-details {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.gothic-app-text {
+    max-width: 80%;
+}
+
+.baroque-title {
+    font-size: 3rem;
+    color: #0073e6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.rococo-description {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.art-nouveau-btn {
+    padding: 12px 30px;
+    background-color: #0073e6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.art-nouveau-btn:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Right Side Image Slider */
+.medieval-app-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+}
+
+.renaissance-slider-container {
+    width: 100%;
+    height: 400px; /* Adjust this height as needed */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.renaissance-slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */
+    position: absolute; /* Overlap images */
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.renaissance-slider-image.active {
+    opacity: 1; /* Make visible */
+    position: relative; /* Show the active image on top */
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .victorian-app-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .renaissance-app-details {
+        padding: 20px;
+    }
+
+    .gothic-app-text {
+        max-width: 100%;
+    }
+
+    .baroque-title {
+        font-size: 2.5rem;
+    }
+
+    .rococo-description {
+        font-size: 1.1rem;
+    }
+
+    .medieval-app-slider {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .victorian-app-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .renaissance-app-details {
+        padding: 15px;
+    }
+
+    .baroque-title {
+        font-size: 2rem;
+    }
+
+    .rococo-description {
+        font-size: 1rem;
+    }
+
+    .art-nouveau-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .renaissance-slider-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .baroque-title {
+        font-size: 1.8rem;
+    }
+
+    .rococo-description {
+        font-size: 0.9rem;
+    }
+
+    .art-nouveau-btn {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    .renaissance-slider-container {
+        height: 250px;
+    }
+}
+
+
+/* Java Application Development Block */
+.javaapp-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+    flex-direction: row-reverse; /* Reverses the layout */
+}
+
+/* Right Side Content */
+.javaapp-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInRight 1s ease-in-out; /* Adjust animation for right side */
+}
+
+.javaapp-heading {
+    font-size: 3rem;
+    color: #005bb5; /* Updated Heading Color */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.javaapp-description {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.learn-more-btn {
+    padding: 12px 30px;
+    background-color: #005bb5; /* Updated Button Color */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #003f8a; /* Darker Blue on Hover */
+    transform: scale(1.05);
+}
+
+/* Left Side Image Slider */
+.javaapp-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 1s ease-in-out; /* Adjust animation for left side */
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px; /* Adjust this height as needed */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */
+    position: absolute; /* Overlap images */
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1; /* Make visible */
+    position: relative; /* Show the active image on top */
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .javaapp-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .javaapp-content {
+        padding: 15px;
+    }
+
+    .javaapp-heading {
+        font-size: 2rem;
+    }
+
+    .javaapp-description {
+        font-size: 1rem;
+    }
+
+    .learn-more-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .javaapp-slider {
+        width: 100%;
+    }
+
+    .slider-image-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .javaapp-heading {
+        font-size: 1.8rem;
+    }
+
+    .javaapp-description {
+        font-size: 0.9rem;
+    }
+
+    .learn-more-btn {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    .slider-image-container {
+        height: 250px;
+    }
+}
+
+
+
+
+
+/* 3D Modeling Block */
+.modeling-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Left Side Content (Text) */
+.modeling-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.modeling-text {
+    max-width: 80%;
+}
+
+.modeling-heading {
+    font-size: 3rem;
+    color: #005bb5;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.modeling-description {
+    font-size: 1.2rem;
+    color: #444444;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.learn-more-btn {
+    padding: 12px 30px;
+    background-color: #005bb5;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+/* Right Side Image Slider */
+.modeling-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+    .modeling-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .modeling-content {
+        padding: 15px;
+    }
+
+    .modeling-text {
+        max-width: 100%;
+    }
+
+    .modeling-heading {
+        font-size: 2rem;
+    }
+
+    .modeling-description {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .learn-more-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .modeling-slider {
+        width: 100%;
+    }
+
+    .slider-image-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modeling-heading {
+        font-size: 1.8rem;
+    }
+
+    .modeling-description {
+        font-size: 0.9rem;
+    }
+
+    .learn-more-btn {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    .slider-image-container {
+        height: 250px;
+    }
+}
+
+
+
+
+
+
+/* Machine Learning Block */
+.machinelearning-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+    flex-direction: row-reverse; /* Image on the left, text on the right */
+}
+
+/* Right Side Content (Text) */
+.machinelearning-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInRight 1s ease-in-out; /* Adjust animation for right side */
+}
+
+.machinelearning-heading {
+    font-size: 3rem;
+    color: #4a90e2; /* Updated Heading Color (Blue for ML theme) */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.machinelearning-description {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.learn-more-btn {
+    padding: 12px 30px;
+    background-color: #4a90e2; /* Updated Button Color (Blue for ML theme) */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #357abd; /* Darker Blue on Hover */
+    transform: scale(1.05);
+}
+
+/* Left Side Image Slider */
+.machinelearning-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInLeft 1s ease-in-out; /* Adjust animation for left side */
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px; /* Adjust this height as needed */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */
+    position: absolute; /* Overlap images */
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1; /* Make visible */
+    position: relative; /* Show the active image on top */
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .machinelearning-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .machinelearning-content {
+        padding: 15px;
+    }
+
+    .machinelearning-heading {
+        font-size: 2rem;
+    }
+
+    .machinelearning-description {
+        font-size: 1rem;
+    }
+
+    .learn-more-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .machinelearning-slider {
+        width: 100%;
+    }
+
+    .slider-image-container {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .machinelearning-heading {
+        font-size: 1.8rem;
+    }
+
+    .machinelearning-description {
+        font-size: 0.9rem;
+    }
+
+    .learn-more-btn {
+        font-size: 0.85rem;
+        padding: 8px 20px;
+    }
+
+    .slider-image-container {
+        height: 250px;
+    }
+}
+
+
+
+/* UI/UX Designing Block */
+.uiux-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Left Side Content (Text) */
+.uiux-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.uiux-text {
+    max-width: 80%;
+}
+
+.uiux-heading {
+    font-size: 3rem;
+    color: #0073e6;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.uiux-description {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Right Side Image Slider */
+.uiux-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px; /* Adjust this height as needed */
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0; /* Start as invisible */
+    transition: opacity 1s ease-in-out; /* Smooth fade-in */
+    position: absolute; /* Overlap images */
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1; /* Make visible */
+    position: relative; /* Show the active image on top */
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for UI/UX Block Responsiveness */
+@media (max-width: 768px) {
+    .uiux-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .uiux-content {
+        padding: 15px;
+    }
+
+    .uiux-text {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .uiux-heading {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .uiux-description {
+        font-size: 1rem; /* Smaller description for mobile */
+    }
+
+    .uiux-slider {
+        width: 100%; /* Full width for slider */
+    }
+
+    .slider-image-container {
+        height: 300px; /* Adjust height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .uiux-heading {
+        font-size: 1.8rem; /* Even smaller heading for very small screens */
+    }
+
+    .uiux-description {
+        font-size: 0.9rem; /* Smaller description for very small screens */
+    }
+
+    .slider-image-container {
+        height: 250px; /* Adjust height for very small screens */
+    }
+}
+
+
+
+
+
+
+
+/* Graphic Designing Block */
+.graphicdesign-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff; /* Light grey background for design vibe */
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+    flex-direction: row-reverse; /* Image on the left, text on the right */
+}
+
+/* Right Side Content (Text) */
+.graphicdesign-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: fadeInRight 1s ease-in-out; /* Smooth fade-in from right */
+}
+
+.graphicdesign-heading {
+    font-size: 3rem;
+    color: #0073e6; /* Vibrant coral red for creative flair */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.graphicdesign-description {
+    font-size: 1.2rem;
+    color: #444444; /* Slightly darker text for better contrast */
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.learn-more-btn {
+    padding: 12px 30px;
+    background-color: #0073e6; /* Button matches the heading color */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #e55050; /* Slightly darker shade on hover */
+    transform: scale(1.05);
+}
+
+/* Left Side Image Slider */
+.graphicdesign-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px; /* Softer, rounded edges for creative aesthetics */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for Graphic Design Block Responsiveness */
+@media (max-width: 768px) {
+    .graphicdesign-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .graphicdesign-content {
+        padding: 15px;
+    }
+
+    .graphicdesign-heading {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .graphicdesign-description {
+        font-size: 1rem; /* Smaller description for mobile */
+    }
+
+    .learn-more-btn {
+        width: 100%; /* Full width button on mobile */
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .graphicdesign-slider {
+        width: 100%; /* Full width for slider */
+    }
+
+    .slider-image-container {
+        height: 300px; /* Adjust height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .graphicdesign-heading {
+        font-size: 1.8rem; /* Even smaller heading for very small screens */
+    }
+
+    .graphicdesign-description {
+        font-size: 0.9rem; /* Smaller description for very small screens */
+    }
+
+    .slider-image-container {
+        height: 250px; /* Adjust height for very small screens */
+    }
+}
+
+
+
+
+/* Digital Marketing Block */
+.digitalmarketing-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Left Side Content (Text) */
+.digitalmarketing-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: slideInLeft 1s ease-in-out;
+}
+
+.digitalmarketing-text {
+    max-width: 80%;
+}
+
+.digitalmarketing-heading {
+    font-size: 3rem;
+    color: #0073e6; /* Same color as UI/UX heading */
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.digitalmarketing-description {
+    font-size: 1.2rem;
+    color: #333333;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    background-color: #0073e6; /* Matching the heading color */
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #005bb5; /* Slightly darker on hover */
+    transform: translateY(-3px);
+}
+
+/* Right Side Image Slider */
+.digitalmarketing-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: slideInRight 1s ease-in-out;
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.slider-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Animations */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for Digital Marketing Block Responsiveness */
+@media (max-width: 768px) {
+    .digitalmarketing-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .digitalmarketing-content {
+        padding: 15px;
+    }
+
+    .digitalmarketing-text {
+        max-width: 100%; /* Full width on mobile */
+    }
+
+    .digitalmarketing-heading {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .digitalmarketing-description {
+        font-size: 1rem; /* Smaller description for mobile */
+    }
+
+    .learn-more-btn {
+        width: 100%; /* Full width button on mobile */
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .digitalmarketing-slider {
+        width: 100%; /* Full width for slider */
+    }
+
+    .slider-image-container {
+        height: 300px; /* Adjust height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .digitalmarketing-heading {
+        font-size: 1.8rem; /* Even smaller heading for very small screens */
+    }
+
+    .digitalmarketing-description {
+        font-size: 0.9rem; /* Smaller description for very small screens */
+    }
+
+    .slider-image-container {
+        height: 250px; /* Adjust height for very small screens */
+    }
+}
+
+
+
+/* Virtual Assistance Block */
+.virtualassistance-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    min-height: 100vh;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    gap: 30px;
+    transition: background-color 0.5s ease-in-out;
+    flex-direction: row-reverse; /* Image on the left, text on the right */
+}
+
+/* Right Side Content (Text) */
+.virtualassistance-content {
+    flex: 1;
+    padding: 20px 40px;
+    animation: fadeInRight 1s ease-in-out;
+}
+
+.virtualassistance-heading {
+    font-size: 3rem;
+    color: #0073e6;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.virtualassistance-description {
+    font-size: 1.2rem;
+    color: #444444;
+    line-height: 1.8;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 25px;
+    transition: color 0.3s ease-in-out;
+}
+
+.learn-more-btn {
+    padding: 12px 30px;
+    background-color: #0073e6;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.learn-more-btn:hover {
+    background-color: #e55050;
+    transform: scale(1.05);
+}
+
+/* Left Side Image Slider */
+.virtualassistance-slider {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    animation: fadeInLeft 1s ease-in-out;
+}
+
+.slider-image-container {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Active Image */
+.slider-image.active {
+    opacity: 1;
+    position: relative;
+}
+
+/* Animations */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries for Virtual Assistance Block Responsiveness */
+@media (max-width: 768px) {
+    .virtualassistance-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .virtualassistance-content {
+        padding: 15px;
+    }
+
+    .virtualassistance-heading {
+        font-size: 2rem; /* Smaller heading for mobile */
+    }
+
+    .virtualassistance-description {
+        font-size: 1rem; /* Smaller description for mobile */
+    }
+
+    .learn-more-btn {
+        width: 100%; /* Full width button on mobile */
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .virtualassistance-slider {
+        width: 100%; /* Full width for slider */
+    }
+
+    .slider-image-container {
+        height: 300px; /* Adjust height for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .virtualassistance-heading {
+        font-size: 1.8rem; /* Even smaller heading for very small screens */
+    }
+
+    .virtualassistance-description {
+        font-size: 0.9rem; /* Smaller description for very small screens */
+    }
+
+    .slider-image-container {
+        height: 250px; /* Adjust height for very small screens */
+    }
+}

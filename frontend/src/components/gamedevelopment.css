@@ -1,0 +1,870 @@
+/* Game Development Block Styling */
+.game-development-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allows content to adjust for smaller screens */
+  padding: 60px 20px;
+  background-image: url('https://img.freepik.com/free-photo/war-zone-landscape-with-apocalyptic-destruction_23-2150985627.jpg?t=st=1739821742~exp=1739825342~hmac=c0221ece6957b8fcf5efa3633924c83df08b9d8cd1d0c732947f3c7fd08f2cd8&w=740'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: auto; /* Auto height for better responsiveness */
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* Text Container */
+.game-development-text-container {
+  flex: 1;
+  padding: 20px;
+  max-width: 600px;
+  z-index: 2;
+  color: white;
+  text-align: left;
+}
+
+/* Heading */
+.game-development-heading {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* Description */
+.game-development-description {
+  font-size: 18px;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Call-to-Action */
+.game-development-call-to-action {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1299f3;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.game-development-call-to-action:hover {
+  color: #2270e6;
+}
+
+/* Image Container */
+.game-development-image-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image */
+.game-development-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🎯 Mobile Responsive Design */
+@media (max-width: 768px) {
+  .game-development-block {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* Center align for better readability */
+      padding: 50px 15px;
+  }
+
+  .game-development-text-container {
+      max-width: 100%;
+      padding: 15px;
+  }
+
+  .game-development-heading {
+      font-size: 30px;
+  }
+
+  .game-development-description {
+      font-size: 16px;
+      margin-bottom: 20px;
+  }
+
+  .game-development-call-to-action {
+      font-size: 18px;
+  }
+
+  .game-development-image-container {
+      padding: 10px;
+      margin-top: 20px; /* Add space between text and image */
+  }
+
+  .game-development-image {
+      max-width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .game-development-block {
+      padding: 40px 10px;
+  }
+
+  .game-development-heading {
+      font-size: 26px;
+  }
+
+  .game-development-description {
+      font-size: 15px;
+  }
+
+  .game-development-call-to-action {
+      font-size: 16px;
+  }
+
+  .game-development-image {
+      max-width: 100%;
+  }
+}
+
+ /* Base Styling */
+.gaming-for-all-block {
+  background-color: white;
+  padding: 60px 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; 
+  box-shadow: inset 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  text-align: center;
+}
+
+/* Text Container */
+.gaming-for-all-text-container {
+  max-width: 90%;
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Heading - Scales for all screen sizes */
+.gaming-for-all-heading {
+  font-size: clamp(28px, 5vw, 50px); /* Adjusts based on screen size */
+  color: #1e90ff;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 1.5px;
+  animation: bounceIn 1s ease-out;
+}
+
+/* Description */
+.gaming-for-all-description {
+  font-size: clamp(16px, 2.5vw, 20px);
+  color: #444;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeIn 2s ease-out 0.5s forwards;
+}
+
+/* Icon Container */
+.gaming-for-all-icons-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 700px;
+  animation: fadeIn 2s ease-out 1s forwards;
+}
+
+/* Each Platform */
+.gaming-platform {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: clamp(16px, 2vw, 22px);
+  font-weight: 600;
+  color: #333;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.gaming-platform:hover {
+  transform: translateY(-5px);
+  color: #1e90ff;
+}
+
+/* Icon Styling */
+.gaming-icon {
+  font-size: clamp(35px, 5vw, 50px);
+  color: #1e90ff;
+  margin-bottom: 8px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* Hover Effect */
+.gaming-icon:hover {
+  transform: scale(1.15);
+  color: #ff5722;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes bounceIn {
+  0% { transform: translateY(-50px); opacity: 0; }
+  60% { transform: translateY(15px); opacity: 1; }
+  80% { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* 🌍 Responsive Design */
+@media screen and (max-width: 768px) {
+  .gaming-for-all-block {
+      padding: 50px 5%;
+  }
+
+  .gaming-for-all-text-container {
+      max-width: 100%;
+  }
+
+  .gaming-for-all-heading {
+      font-size: 28px;
+  }
+
+  .gaming-for-all-description {
+      font-size: 16px;
+  }
+
+  .gaming-for-all-icons-container {
+      gap: 20px;
+  }
+
+  .gaming-platform {
+      font-size: 16px;
+  }
+
+  .gaming-icon {
+      font-size: 35px;
+  }
+}
+
+
+
+
+
+ /* Main Section */
+.game-services-block {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px; /* Added margin to create gap between the blocks */
+}
+
+.game-services-heading-container {
+    margin-bottom: 40px;
+}
+
+.game-services-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #226bb4;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.game-services-description {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Service Cards Container */
+.game-services-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Individual Service Card */
+.game-service-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.game-service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+    font-size: 60px;
+    color: #007bff;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.game-service-card:hover .service-icon {
+    color: #0056b3;
+}
+
+.service-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+.service-description {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 0;
+    transition: color 0.3s ease;
+}
+
+.game-service-card:hover .service-description {
+    color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .game-services-heading {
+        font-size: 2rem;
+    }
+
+    .game-services-description {
+        font-size: 1rem;
+    }
+
+    .game-service-card {
+        padding: 20px;
+    }
+
+    .service-icon {
+        font-size: 50px;
+    }
+
+    .service-title {
+        font-size: 1.6rem;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+    }
+}
+
+/* Optional Additional Styling */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.game-services-cards-container div {
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+.game-service-card:nth-child(even) {
+    animation-delay: 0.2s;
+}
+
+.game-service-card:nth-child(odd) {
+    animation-delay: 0.4s;
+}
+
+/* Main Block Styling */
+.consider-mobile-game-development {
+  background: url('https://img.freepik.com/free-photo/war-conflict-landscape-with-soldiers-fighting_23-2149766327.jpg?t=st=1739824139~exp=1739827739~hmac=90648299d7ed7d774fb7598775b2cbc77cbad12c5674f302135acfe5cfc59f87&w=740') 
+  no-repeat center center/cover;
+  padding: 0;
+  min-height: 100vh; /* Adjusted for better responsiveness */
+  color: white;
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-attachment: fixed;
+  margin-top: 50px;
+  width: 100%; /* Ensuring full width */
+}
+
+/* Dark Overlay for Better Readability */
+.consider-mobile-game-development::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Text Container */
+.consider-mobile-game-development-text-container {
+  z-index: 2;
+  max-width: 90%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Heading */
+.consider-mobile-game-development-heading {
+  font-size: clamp(28px, 4vw, 40px); /* Scales dynamically */
+  font-weight: 800;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fff;
+  opacity: 0;
+  animation: fadeInUp 1s ease-in-out forwards;
+  line-height: 1.2;
+}
+
+/* Description */
+.consider-mobile-game-development-description {
+  font-size: clamp(16px, 2vw, 20px);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  animation-delay: 0.5s;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 15px;
+}
+
+/* Cards Container */
+.consider-mobile-game-development-cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeInUp 2s ease-in-out forwards;
+  animation-delay: 1s;
+  z-index: 2;
+}
+
+/* Service Cards */
+.consider-mobile-game-service-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 12px;
+  padding: 25px;
+  width: calc(33% - 20px); /* Three cards in a row */
+  min-width: 280px; /* Ensuring cards don't get too small */
+  text-align: center;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.consider-mobile-game-service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Service Title */
+.mobile-service-title {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #f8b400;
+  transition: color 0.3s ease;
+}
+
+/* Hover Effect for Service Titles */
+.mobile-service-title:hover {
+  color: #ffcb00;
+}
+
+/* Service Description */
+.mobile-service-description {
+  font-size: clamp(14px, 1.8vw, 16px);
+  line-height: 1.6;
+  color: #ddd;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards;
+  animation-delay: 1.5s;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .consider-mobile-game-development-cards-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .consider-mobile-game-service-card {
+      width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .consider-mobile-game-development-heading {
+      font-size: 24px;
+  }
+
+  .consider-mobile-game-development-description {
+      font-size: 16px;
+  }
+
+  .consider-mobile-game-service-card {
+      width: 95%;
+  }
+}
+
+/* Key Animations */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+/* Technologies We Use Block */
+.technologies-we-use-block {
+    padding: 6rem 2rem;
+    background-color: #ffffff;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .technologies-we-use-heading-container {
+    margin-bottom: 3rem;
+  }
+  
+  .technologies-we-use-heading {
+    font-size: 3rem;
+    color: #2c3e50;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .technologies-we-use-description {
+    font-size: 1.25rem;
+    color: #666;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .technologies-swiper {
+    width: 100%;
+    padding: 2rem 0;
+  }
+  
+  .technology-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0;
+    margin: 1rem;
+  }
+  
+  .technology-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 123, 255, 0.2);
+    border-color: #007bff;
+  }
+  
+  .technology-icon {
+    font-size: 3.5rem;
+    color: #007bff;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .technology-card:hover .technology-icon {
+    color: #0056b3;
+  }
+  
+  .technology-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .technology-description {
+    font-size: 1rem;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+  }
+  
+  /* Swiper Navigation and Pagination Styles */
+  .swiper-pagination-bullet {
+    background: #007bff !important;
+    opacity: 0.5 !important;
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 8px !important;
+  }
+  
+  .swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    background: #007bff !important;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #007bff !important;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    width: 40px !important;
+    height: 40px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease;
+  }
+  
+  .swiper-button-next:hover,
+  .swiper-button-prev:hover {
+    background: rgba(0, 123, 255, 0.1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .technologies-we-use-heading {
+      font-size: 2.5rem;
+    }
+  
+    .technologies-we-use-description {
+      font-size: 1.1rem;
+    }
+  
+    .technology-card {
+      padding: 1.5rem;
+    }
+  
+    .technology-icon {
+      font-size: 3rem;
+    }
+  
+    .technology-title {
+      font-size: 1.3rem;
+    }
+  
+    .technology-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .technologies-we-use-heading {
+      font-size: 2rem;
+    }
+  
+    .technologies-we-use-description {
+      font-size: 1rem;
+    }
+  
+    .technology-card {
+      padding: 1rem;
+    }
+  
+    .technology-icon {
+      font-size: 2.5rem;
+    }
+  
+    .technology-title {
+      font-size: 1.1rem;
+    }
+  
+    .technology-description {
+      font-size: 0.8rem;
+    }
+  }
+  
+
+
+
+
+/* Sixth Block: Partner with the Best Game Development Company */
+.partner-with-us-block {
+  background-image: url('https://img.freepik.com/free-photo/war-tank-dark-style_23-2151605645.jpg?t=st=1739825856~exp=1739829456~hmac=2d69d61d503f56e7482156f3002eb99788752e597ff608cd0c6278935cfd761f&w=826');
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 2rem;
+  color: #ffffff;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.partner-with-us-container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.partner-with-us-text-container {
+  width: 50%;
+  padding-right: 2rem;
+  animation: fadeInLeft 1s ease-out;
+}
+
+.partner-with-us-heading {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.partner-with-us-description {
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.partner-with-us-button {
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1.1rem;
+  padding: 0.9rem 2.5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.partner-with-us-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-5px);
+}
+
+.partner-with-us-image-container {
+  width: 45%;
+  animation: fadeInRight 1s ease-out;
+}
+
+.partner-with-us-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .partner-with-us-container {
+      flex-direction: column-reverse;
+      text-align: center;
+  }
+
+  .partner-with-us-text-container {
+      width: 100%;
+      padding: 1rem;
+  }
+
+  .partner-with-us-image-container {
+      width: 80%;
+      margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .partner-with-us-heading {
+      font-size: 2.2rem;
+  }
+
+  .partner-with-us-description {
+      font-size: 1rem;
+  }
+
+  .partner-with-us-button {
+      font-size: 1rem;
+      padding: 0.8rem 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .partner-with-us-heading {
+      font-size: 1.8rem;
+  }
+
+  .partner-with-us-description {
+      font-size: 0.9rem;
+      line-height: 1.6;
+  }
+
+  .partner-with-us-button {
+      font-size: 0.85rem;
+      padding: 0.7rem 1.5rem;
+  }
+
+  .partner-with-us-image-container {
+      width: 100%;
+  }
+}

@@ -1,0 +1,214 @@
+/* General Styles */
+.founding-member {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    text-align: center;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Hero Section - Full Page */
+  .founding-member-hero-section {
+    background-image: url('https://images.unsplash.com/photo-1568952433726-3896e3881c65?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Add your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Full page height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  .founding-member-hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Darker overlay for better text visibility */
+  }
+  
+  .founding-member-hero-content {
+    z-index: 1;
+    max-width: 800px;
+    padding: 0 20px;
+    animation: slideUp 1s ease-in-out; /* Slide-up animation */
+  }
+  
+  .founding-member-hero-heading {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .founding-member-hero-description,
+  .founding-member-hero-subdescription {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin: 0 auto 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Members Section - Separate Block */
+  .founding-member-members-section {
+    padding: 80px 20px;
+    background-color: #ffffff;
+  }
+  
+  .founding-member-section-heading {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #007bff;
+    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
+  }
+  
+  .founding-member-section-description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 40px;
+    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
+  }
+  
+  .founding-member-members-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+  }
+  
+  .founding-member-member {
+    background: rgb(245, 242, 242);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.8s ease-in-out; /* Fade-in and slide-up animation */
+  }
+  
+  .founding-member-member:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .founding-member-avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .founding-member-name {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  .founding-member-role {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .founding-member-linkedin-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #0077b5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .founding-member-linkedin-link:hover {
+    color: #005582;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .founding-member-hero-heading {
+      font-size: 3rem;
+    }
+  
+    .founding-member-hero-description,
+    .founding-member-hero-subdescription {
+      font-size: 1.2rem;
+    }
+  
+    .founding-member-section-heading {
+      font-size: 2rem;
+    }
+  
+    .founding-member-section-description {
+      font-size: 1rem;
+    }
+  
+    .founding-member-members-list {
+      gap: 20px;
+    }
+  
+    .founding-member-member {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .founding-member-hero-heading {
+      font-size: 2.5rem;
+    }
+  
+    .founding-member-hero-description,
+    .founding-member-hero-subdescription {
+      font-size: 1rem;
+    }
+  
+    .founding-member-section-heading {
+      font-size: 1.8rem;
+    }
+  
+    .founding-member-section-description {
+      font-size: 0.9rem;
+    }
+  
+    .founding-member-members-list {
+      gap: 15px;
+    }
+  }

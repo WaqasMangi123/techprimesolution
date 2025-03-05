@@ -1,0 +1,582 @@
+/* Full-page Image Block */
+.full-page-image {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflowed content */
+}
+
+/* Image Styling */
+.full-page-image .image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the screen */
+    opacity: 0.85; /* Slightly fade for better text visibility */
+    transition: transform 1s ease-in-out; /* Smooth animation */
+}
+
+/* Hover Effect (Disabled on Mobile) */
+@media (hover: hover) {
+    .full-page-image:hover .image {
+        transform: scale(1.1); /* Zoom in on hover */
+    }
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+    .full-page-image {
+        height: 60vh; /* Reduce height on smaller screens */
+    }
+
+    .full-page-image .image {
+        opacity: 0.9; /* Increase opacity for better visibility */
+    }
+}
+
+@media (max-width: 480px) {
+    .full-page-image {
+        height: 50vh; /* Adjust height for mobile */
+    }
+}
+
+/* About Us Section */
+.about-container {
+    padding: 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    background-color: #ffffff; /* Light background for content */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add a shadow to lift content */
+    max-width: 800px;
+    margin: -100px auto 50px auto; /* Center the content with a slight overlap */
+    border-radius: 15px; /* Rounded corners */
+    animation: fadeInUp 1.5s ease-out; /* Fade-in and slide-up effect */
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* General styling for the about-us block */
+.about-us-block {
+    display: flex;
+    flex-direction: row; /* Left side image and right side text */
+    justify-content: center; /* Center align horizontally */
+    align-items: center; /* Vertically center the content */
+    padding: 60px 40px; /* Add padding for spacing */
+    background-color: #ffffff; /* Background color for the block */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin: 20px 0; /* Margin between sections */
+    text-align: center; /* Center text inside the block */
+}
+
+.about-us-image {
+    flex: 1; /* Image takes up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-img {
+    max-width: 100%; /* Ensure the image doesn't overflow */
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners for the image */
+}
+
+/* Styling for the text section */
+.about-us-text {
+    flex: 1; /* Text takes up equal space */
+    padding-left: 30px;
+    text-align: center; /* Center align text */
+    font-family: 'Arial', sans-serif;
+    font-size: 0.9em; /* Reduced text size */
+}
+
+/* Styling for headings */
+.about-us-text h2 {
+    font-size: 4em; /* Larger font size for a more professional look */
+    font-weight: 700; /* Use a stronger weight for boldness */
+    margin-bottom: 20px;
+    color: #075777; /* Darker color for better contrast */
+    letter-spacing: 1px; /* Slight letter spacing for readability */
+    text-transform: uppercase; /* Uppercase for a more modern, authoritative feel */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow for depth */
+    line-height: 1.4; /* Adjust line height for better spacing */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional sans-serif font */
+    transition: all 0.3s ease; /* Smooth transition effect for hover */
+}
+
+/* Hover effect for the heading */
+.about-us-text h2:hover {
+    color: #58a6ff; /* Light blue color for a professional yet vibrant effect */
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Slightly stronger text shadow on hover */
+}
+
+
+/* Styling for paragraph text */
+.about-us-text p {
+    font-size: 1.1em; /* Reduced paragraph text size */
+    color: #000000;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 750px; /* Limit the width of paragraphs for better readability */
+}
+
+/* Styling for the buttons */
+.about-us-buttons {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.hire-us-btn,
+.learn-more-btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hire-us-btn {
+    background-color: #58a6ff; /* Light blue color */
+    color: #fff;
+}
+
+.learn-more-btn {
+    background-color: #58a6ff; /* Light blue color */
+    color: #fff;
+}
+
+.hire-us-btn:hover,
+.learn-more-btn:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.hire-us-btn:focus,
+.learn-more-btn:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Styling for the second block with white background */
+.about-us-block-second {
+    background-color: #fff; /* White background for the second block */
+    padding: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Third Block: Equal height and width for image and text */
+.about-us-block-third {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure equal height for image and text */
+    height: 400px; /* Set a fixed height for uniformity */
+    background-color: #f4f4f4; /* Background color */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-us-image-third {
+    flex: 1; /* Equal width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.about-us-text-third {
+    flex: 1; /* Equal width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-us-img-third {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Mobile responsive tweaks */
+@media (max-width: 768px) {
+    .about-us-block {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        padding: 40px;
+    }
+
+    .about-us-text {
+        text-align: center; /* Center the text on smaller screens */
+        padding-left: 0;
+    }
+
+    .about-us-image {
+        margin-bottom: 20px; /* Add margin below the image when stacked */
+    }
+
+    .hire-us-btn,
+    .learn-more-btn {
+        width: 100%; /* Make buttons full-width on smaller screens */
+    }
+
+    /* Adjusting for the third block on smaller screens */
+    .about-us-block-third {
+        flex-direction: column; /* Stack the image and text vertically */
+        height: auto;
+    }
+
+    .about-us-image-third,
+    .about-us-text-third {
+        width: 100%; /* Full width on smaller screens */
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Styling for the extra-section block */
+.extra-section {
+    display: flex;
+    flex-direction: row-reverse; /* Image on the right, text on the left */
+    justify-content: space-between;
+    align-items: center; /* Vertically center the content */
+    padding: 60px;
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    border-radius: 10px;
+    margin: 40px 0; /* Space between sections */
+}
+
+/* Styling for the image container */
+.extra-image {
+    flex: 1; /* Image takes up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extra-image img {
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto;
+    border-radius: 8px; /* Optional rounded corners for the image */
+}
+
+/* Styling for the text container */
+.extra-content {
+    flex: 1; /* Text takes up equal space */
+    padding: 20px;
+    text-align: center; /* Center align text */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styling for the heading */
+.extra-content h2 {
+    font-size: 4em; /* Larger font size for a professional look */
+    font-weight: 700; /* Strong bold weight */
+    margin-bottom: 20px;
+    color: #075777; /* Darker blue color */
+    letter-spacing: 1px; /* Slight letter spacing for readability */
+    text-transform: uppercase; /* Uppercase for modern, authoritative feel */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    line-height: 1.4; /* Adjust line height for better spacing */
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Professional sans-serif font */
+    transition: all 0.3s ease; /* Smooth transition effect for hover */
+}
+
+/* Styling for the paragraph text */
+.extra-content p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 750px; /* Limit the width of paragraphs for better readability */
+    margin: 0 auto; /* Center align the paragraph */
+}
+
+/* Styling for the button container */
+.extra-buttons {
+    display: flex;
+    justify-content: center; /* Align buttons in the center */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* Styling for the buttons */
+.discover-more-btn,
+.get-in-touch-btn {
+    padding: 12px 25px;
+    font-size: 1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #58a6ff; /* Light blue color matching the theme */
+    color: #fff; /* White text on buttons */
+}
+
+.discover-more-btn:hover,
+.get-in-touch-btn:hover {
+    transform: translateY(-5px); /* Slight lift effect on hover */
+}
+
+.discover-more-btn:focus,
+.get-in-touch-btn:focus {
+    outline: none; /* Remove focus outline */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .extra-section {
+        flex-direction: column; /* Stack the image and text vertically on smaller screens */
+        padding: 20px;
+    }
+
+    .extra-content h2 {
+        font-size: 2.2em; /* Adjust font size for smaller screens */
+    }
+
+    .extra-content p {
+        font-size: 1em; /* Adjust paragraph text size */
+        max-width: 100%; /* Allow paragraph text to take full width */
+    }
+
+    .extra-buttons {
+        flex-direction: column; /* Stack buttons vertically on smaller screens */
+        gap: 15px;
+        margin-top: 30px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/* Container Styling */
+.mission-vision-container {
+    text-align: center;
+    padding: 80px 20px;
+    background: #ffffff;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Heading Section */
+.mv-heading {
+    margin-bottom: 50px;
+    animation: slideDown 1s ease-in-out;
+}
+
+.mv-heading h2 {
+    font-size: 49px;
+    font-weight: 900;
+    color: #003366;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.mv-heading p {
+    font-size: 21px;
+    font-weight: 500;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Flex Container for Cards */
+.mission-vision-values {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-top: 20px;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+/* Cards */
+.mv-card {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
+    overflow: hidden;
+    cursor: pointer;
+    transform: scale(1);
+}
+
+/* Hover Effect */
+.mv-card:hover {
+    transform: translateY(-12px) scale(1.07);
+    box-shadow: 0px 18px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Circular Background */
+.mv-circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Background Colors */
+.red { background: linear-gradient(135deg, #007bff, #00c6ff); }
+.blue { background: linear-gradient(135deg, #007bff, #00c6ff); }
+.orange { background: linear-gradient(135deg, #007bff, #00c6ff); }
+
+/* Always Visible Text */
+.always-visible {
+    color: #003366;
+    font-size: 22px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Icons */
+.mv-icon {
+    font-size: 55px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+    color: #003366;
+}
+
+/* Hover Effects */
+.mv-card:hover .mv-icon {
+    transform: scale(1.3);
+    color: white;
+}
+
+.mv-card:hover .always-visible {
+    color: white;
+}
+
+/* Paragraph Hidden Initially */
+.mv-content p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin-top: 15px;
+    display: none;
+    color: white;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show Full Text on Hover */
+.mv-card:hover .mv-content p {
+    display: block;
+    opacity: 1;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .mission-vision-container {
+        padding: 50px 10px;
+    }
+
+    .mv-heading h2 {
+        font-size: 36px;
+    }
+
+    .mv-heading p {
+        font-size: 16px;
+        max-width: 90%;
+    }
+
+    .mission-vision-values {
+        flex-direction: column; /* Stack cards in a column */
+        align-items: center;
+    }
+
+    .mv-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .mv-icon {
+        font-size: 45px;
+    }
+
+    .always-visible {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mv-heading h2 {
+        font-size: 32px;
+    }
+
+    .mv-heading p {
+        font-size: 15px;
+    }
+
+    .mv-card {
+        width: 220px;
+        height: 220px;
+    }
+
+    .mv-icon {
+        font-size: 40px;
+    }
+
+    .always-visible {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,657 @@
+/* Recruitment Block Styling */
+.recruitment-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    background: linear-gradient(120deg, #4f86c5, #16213e);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .recruitment-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+  }
+  
+  .recruitment-content {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  .recruitment-heading {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffc107;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+  
+  .recruitment-heading .highlight {
+    color: #ff7f50;
+  }
+  
+  .recruitment-subheading {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #e0e0e0;
+  }
+  
+  .recruitment-description {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #d4d4d4;
+    line-height: 1.6;
+  }
+  
+  .apply-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff7f50;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .apply-button:hover {
+    background: #ffc107;
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(255, 127, 80, 0.5);
+  }
+  
+  .recruitment-image {
+    flex: 1;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .recruitment-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+  }
+  
+  .recruitment-image img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  [data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  [data-aos="fade-up"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  [data-aos="fade-left"] {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  [data-aos="fade-left"].aos-animate {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  [data-aos="zoom-in"] {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  
+  [data-aos="zoom-in"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .recruitment-container {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .recruitment-content {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+  
+    .recruitment-heading {
+      font-size: 2.5rem;
+    }
+  
+    .recruitment-subheading {
+      font-size: 1.2rem;
+    }
+  
+    .recruitment-description {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recruitment-heading {
+      font-size: 2rem;
+    }
+  
+    .recruitment-subheading {
+      font-size: 1rem;
+    }
+  
+    .recruitment-description {
+      font-size: 0.85rem;
+    }
+  
+    .apply-button {
+      font-size: 0.9rem;
+      padding: 12px 25px;
+    }
+  }
+  
+
+
+
+
+
+
+/* Block 1.5 - Open Positions */
+.positions-container {
+    background: #ffffff;
+    text-align: center;
+    padding: 80px 10%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .positions-heading {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #005bea;
+    margin-bottom: 10px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  .positions-subheading {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .positions-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    max-width: 900px;
+  }
+  
+  .position-card {
+    background: linear-gradient(to right, #005bea, #00c6fb);
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 320px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: left;
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .position-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+  }
+  
+  .position-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .position-requirements {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+  
+  .apply-now {
+    margin-top: 15px;
+    display: inline-block;
+    background: white;
+    color: #005bea;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .apply-now:hover {
+    background: #ffd700;
+    color: black;
+  }
+  
+  /* Keyframe Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+
+
+
+/* Positions Container */
+.positions-container {
+  padding: 80px 20px; /* Increased padding for better spacing */
+  background-color: #ffffff; /* Pure white background */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.positions-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Heading */
+.positions-heading {
+  font-size: 2.5rem; /* Larger font size for emphasis */
+  font-weight: 700; /* Bold font weight */
+  color: #3a74cf; /* Professional blue color */
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* Subheading */
+.positions-subheading {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+  animation: fadeIn 1.5s ease-in-out; /* Smooth fade-in animation */
+}
+
+/* No Openings Message */
+.no-openings-message {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: inline-block;
+  max-width: 500px;
+  width: 100%;
+  animation: fadeInUp 1s ease-in-out; /* Smooth fade-in animation */
+  border: 1px solid #e0e0e0; /* Light border for a polished look */
+}
+
+.no-openings-message p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.6; /* Improved readability */
+}
+
+.no-openings-message p::before {
+  content: "🚫";
+  margin-right: 10px;
+  font-size: 1.5rem; /* Larger emoji for visual appeal */
+}
+
+/* Hover Effect for Message */
+.no-openings-message:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Keyframe Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .positions-container {
+    padding: 60px 15px; /* Adjusted padding for mobile */
+  }
+
+  .positions-heading {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+
+  .positions-subheading {
+    font-size: 1rem; /* Smaller font size for mobile */
+    margin-bottom: 30px; /* Adjusted margin for mobile */
+  }
+
+  .no-openings-message {
+    padding: 20px; /* Reduced padding for mobile */
+    border-radius: 12px; /* Slightly smaller border radius for mobile */
+  }
+
+  .no-openings-message p {
+    font-size: 1rem; /* Smaller font size for mobile */
+  }
+
+  .no-openings-message p::before {
+    font-size: 1.2rem; /* Smaller emoji for mobile */
+  }
+}
+
+
+ /* Block 2 Styles (Form Section) */
+.form-container {
+  padding: 80px 20px;
+  background: linear-gradient(120deg, #16213e, #0f3460);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.form-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+  border-radius: 15px;
+}
+
+.form-heading {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #ffc107;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  animation: fadeIn 1s ease;
+}
+
+.form-subheading {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  color: #e0e0e0;
+  animation: fadeIn 1.2s ease;
+}
+
+.recruitment-form {
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: left;
+  animation: fadeInUp 1.4s ease;
+  position: relative;
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.form-group label {
+  font-size: 1rem;
+  color: #e0e0e0;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 12px;
+  font-size: 1rem;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: #f5f5f5;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 120px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border: 2px solid #ffc107;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+}
+
+/* File Upload */
+.file-upload {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.file-upload:hover {
+  border: 2px solid #ffc107;
+  transform: scale(1.02);
+  box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+}
+
+.file-upload input {
+  display: none;
+}
+
+.file-upload span {
+  color: #0f3460;
+  font-weight: 600;
+}
+
+/* Submit Button */
+.form-submit {
+  padding: 15px 35px;
+  background: #ff7f50;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  animation: fadeInUp 1.8s ease;
+  display: block;
+  margin: 40px auto 0;
+}
+
+.form-submit:hover {
+  background: #ffc107;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 127, 80, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+[data-aos="fade-up"] {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.95rem;
+  }
+
+  .form-submit {
+    font-size: 0.9rem;
+    padding: 12px 25px;
+  }
+
+  .form-heading {
+    font-size: 2.2rem;
+  }
+
+  .form-subheading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container {
+    padding: 50px 15px;
+  }
+
+  .form-heading {
+    font-size: 1.8rem;
+  }
+
+  .form-subheading {
+    font-size: 0.9rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    font-size: 0.85rem;
+  }
+
+  .form-submit {
+    font-size: 0.85rem;
+    padding: 10px 20px;
+  }
+}

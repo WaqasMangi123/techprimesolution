@@ -1,0 +1,724 @@
+/* Full-page container */
+.digital-marketing-container {
+    width: 100%;
+    overflow: hidden;
+    background: #faf9f9;
+}
+
+/* Digital marketing section */
+.digital-marketing {
+    width: 100%;
+    height: 100vh; /* Adjust height for better mobile compatibility */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    position: relative;
+}
+
+/* Full-screen image */
+.digital-marketing-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transform: scale(1.1);
+    animation: fadeInScale 1.5s ease-out forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .digital-marketing {
+        height: 40vh; /* Reduce height for smaller screens */
+    }
+    
+    .digital-marketing-image {
+        height: 100%;
+        transform: scale(1); /* Adjust scale to prevent cropping */
+    }
+}
+
+@media (max-width: 480px) {
+    .digital-marketing {
+        height: 70vh; /* Further reduce height for very small screens */
+    }
+
+    .digital-marketing-image {
+        height: 100%;
+    }
+}
+
+/* Fade-in animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Block 2 Styling */
+.digital-marketing-block2 {
+    width: 100%;
+    padding: 100px 10%;
+    background: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.digital-marketing-content {
+    display: flex;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%;
+    gap: 50px;
+}
+
+.digital-marketing-block2-image {
+    width: 55%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.digital-marketing-block2-image:hover {
+    transform: scale(1.05);
+}
+
+.digital-marketing-text {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: fadeInText 1.5s ease-out forwards;
+}
+
+.digital-marketing-text h2 {
+    font-size: 2.2rem;
+    color: #007bff; /* Blue */
+    margin-bottom: 15px;
+    line-height: 1.3;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.digital-marketing-text p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.digital-marketing-button {
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: #007bff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.digital-marketing-button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments for Mobile */
+@media (max-width: 768px) {
+    .digital-marketing-block2 {
+        padding: 50px 5%;
+    }
+
+    .digital-marketing-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .digital-marketing-block2-image {
+        width: 100%;
+    }
+
+    .digital-marketing-text {
+        width: 100%;
+    }
+
+    .digital-marketing-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .digital-marketing-text p {
+        font-size: 1rem;
+    }
+
+    .digital-marketing-button {
+        font-size: 1rem;
+        padding: 12px 24px;
+    }
+}
+
+
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Block 3 - Digital Marketing Services */
+.digital-marketing-services-container {
+    background-color: #ecebeb; /* Neutral background for the block */
+    padding: 100px 20px; /* Increased padding for better spacing */
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1); /* Soft shadow for elevation */
+    border-radius: 15px;
+    margin: 60px auto; /* Center the block with space around it */
+    max-width: 1200px; /* Max width for the content */
+    background: #f1f8ff; /* Light blue background for the container */
+    position: relative;
+}
+
+/* Heading Style */
+.digital-marketing-services-heading {
+    font-size: 36px;
+    font-weight: 700;
+    color: #004085; /* Blue color for the heading */
+    margin-bottom: 40px;
+    animation: fadeInUp 1.5s ease-out forwards; /* Custom fade-in animation */
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Capitalize the heading */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1); /* Soft text shadow */
+}
+
+/* Grid Layout */
+.digital-marketing-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Auto-adjust columns */
+    gap: 30px;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Service Card Style */
+.digital-marketing-service-card {
+    background-color: #ffffff; /* White background for the cards */
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: 1px solid #e0e0e0; /* Subtle border around the cards */
+    text-align: center;
+    position: relative;
+    overflow: hidden; /* To prevent content overflow */
+}
+
+/* Hover Effects for Service Cards */
+.digital-marketing-service-card:hover {
+    transform: translateY(-8px); /* Slight lift effect */
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Icon Styling */
+.digital-marketing-service-icon {
+    font-size: 48px;
+    color: #004085; /* Blue color for icons */
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Icons */
+.digital-marketing-service-card:hover .digital-marketing-service-icon {
+    transform: scale(1.1); /* Slight icon scaling effect */
+}
+
+/* Service Title Styling */
+.digital-marketing-service-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333; /* Dark text for titles */
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Service Description Styling */
+.digital-marketing-service-description {
+    font-size: 16px;
+    color: #555; /* Slightly lighter text */
+    line-height: 1.6;
+    margin-bottom: 25px; /* Space between description and other elements */
+}
+
+/* Animation Keyframe */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px); /* Start from bottom */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Smooth Transitions for Cards */
+.digital-marketing-service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Added Smooth Animation for Heading */
+.digital-marketing-services-heading {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+/* Subtle Background Animation for Hover Effect */
+.digital-marketing-service-card:hover {
+    background-color: #f9f9f9; /* Slight background change */
+}
+
+/* Added Gradient Background */
+.digital-marketing-services-container {
+    background: linear-gradient(135deg, #f1f8ff, #ffffff); /* Gradient background */
+}
+
+/* Additional Responsive Styles */
+@media (max-width: 768px) {
+    .digital-marketing-service-card {
+        padding: 25px;
+    }
+
+    .digital-marketing-services-heading {
+        font-size: 32px;
+    }
+}
+
+
+
+
+
+
+
+
+/* Block 4 Container */
+.digital-marketing-block4-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 20px;
+    gap: 50px;
+    background-color: #f8f9fa; /* Light background for the whole block */
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Left Image */
+  .digital-marketing-block4-image-container {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .digital-marketing-block4-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  /* Right Text Section */
+  .digital-marketing-block4-text-container {
+    flex: 1;
+    max-width: 500px;
+  }
+  
+  .digital-marketing-block4-heading {
+    font-size: 20px; /* Reduced font size */
+    font-weight: 500;
+    color: #004085;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    line-height: 1.4;
+  }
+  
+  .digital-marketing-block4-description {
+    font-size: 12px; /* Reduced font size */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+  }
+  
+  .digital-marketing-block4-button {
+    background-color: #004085;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .digital-marketing-block4-button:hover {
+    background-color: #003366;
+    transform: scale(1.1);
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .digital-marketing-block4-container {
+      flex-direction: column;
+      padding: 50px 10px;
+    }
+  
+    .digital-marketing-block4-image-container,
+    .digital-marketing-block4-text-container {
+      flex: none;
+      width: 100%;
+    }
+  
+    .digital-marketing-block4-heading {
+      font-size: 24px; /* Further reduced font size for mobile */
+    }
+  
+    .digital-marketing-block4-description {
+      font-size: 14px; /* Further reduced font size for mobile */
+    }
+  
+    .digital-marketing-block4-button {
+      width: 100%;
+    }
+  }
+  
+
+
+
+
+
+/* Block 4 - Premium Side Image and Text */
+.digital-marketing-block4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 50px;
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 25px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    margin-top: 100px;
+    transition: all 0.4s ease-in-out;
+    transform: translateY(0);
+    overflow: hidden;
+}
+
+/* Subtle hover effect for dynamic feel */
+.digital-marketing-block4:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 12px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Content layout */
+.digital-marketing-block4-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 40px;
+}
+
+.digital-marketing-block4-text {
+    width: 50%;
+    padding-right: 40px;
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+.digital-marketing-block4-text h2 {
+    font-size: 3rem;
+    font-weight: 900;
+    color: #1c3d80;
+    margin-bottom: 20px;
+    line-height: 1.3;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+.digital-marketing-block4-text p {
+    font-size: 1.25rem;
+    color: #444;
+    margin-bottom: 30px;
+    line-height: 1.8;
+    font-family: 'Roboto', sans-serif;
+    opacity: 0.85;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+/* Modern button design */
+.digital-marketing-button {
+    padding: 16px 45px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.digital-marketing-button:hover {
+    background: linear-gradient(135deg, #0056b3, #003f7f);
+    box-shadow: 0 8px 25px rgba(0, 123, 255, 0.25);
+}
+
+.digital-marketing-button:focus {
+    outline: none;
+}
+
+/* Enhanced Image Styling */
+.digital-marketing-block4-image {
+    width: 50%;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+.digital-marketing-block4-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: transform 0.4s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(0.95);
+}
+
+.digital-marketing-block4-image img:hover {
+    transform: scale(1.06);
+    filter: brightness(1);
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(60px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .digital-marketing-block4 {
+        flex-direction: column;
+        padding: 60px 25px;
+        margin-top: 70px;
+    }
+
+    .digital-marketing-block4-text {
+        width: 100%;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .digital-marketing-block4-text h2 {
+        font-size: 2.5rem;
+    }
+
+    .digital-marketing-button {
+        padding: 14px 35px;
+    }
+
+    .digital-marketing-block4-image {
+        width: 100%;
+    }
+}
+
+  
+
+
+
+
+
+
+ /* Block 5 - Techprime Digital Marketing */
+.techprime-digital-marketing-block {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #ffffff, #e3f2fd);
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px rgba(0, 123, 255, 0.2);
+    text-align: center;
+    color: #0a192f;
+    overflow: hidden;
+}
+
+/* Heading */
+.techprime-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #007bff, #00aaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Description */
+.techprime-description {
+    font-size: 1.2rem;
+    color: #0a192f;
+    max-width: 750px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+}
+
+/* Grid Container */
+.techprime-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+/* Individual Cards */
+.techprime-card {
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    width: 320px;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
+    border: 2px solid rgba(0, 123, 255, 0.2);
+}
+
+/* Card Hover Effect */
+.techprime-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 40px rgba(0, 123, 255, 0.3);
+    background: rgba(0, 123, 255, 0.15);
+}
+
+/* Left Highlight Bar */
+.techprime-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background: #007bff;
+    transition: width 0.4s ease;
+}
+
+.techprime-card:hover::before {
+    width: 100%;
+    opacity: 0.1;
+}
+
+/* Card Number */
+.techprime-card h3 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #007bff;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Card Title */
+.techprime-card h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #0a192f;
+    margin-bottom: 10px;
+}
+
+/* Card Text */
+.techprime-card p {
+    font-size: 1rem;
+    color: #0a192f;
+    line-height: 1.6;
+}
+
+/* Button Styling */
+.techprime-button {
+    margin-top: 40px;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(90deg, #007bff, #00aaff);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Button Hover */
+.techprime-button:hover {
+    background: linear-gradient(90deg, #00aaff, #007bff);
+    box-shadow: 0px 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+/* Button Active Click Effect */
+.techprime-button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .techprime-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .techprime-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
