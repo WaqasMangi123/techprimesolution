@@ -69,7 +69,7 @@ const Portfolio = () => {
       images: [
         "/sona1.jpeg",
         "/sona2.jpeg",
-        "/sona3.jpeg",
+        "/sona33.jpeg",
         "/sona4.jpeg"
       ],
       tools: [
@@ -161,10 +161,10 @@ const Portfolio = () => {
       technologies: ["Java", "JavaSpringBoot", "MySQL", "React"],
       link: "#",
       images: [
-        "/ecommerce1.jpg",
-        "/ecommerce2.jpg",
-        "/ecommerce3.jpg",
-        "/ecommerce4.jpg"
+        "/ecommerce11.jpeg",
+        "/ecommerce2.jpeg",
+        "/ecommerce3.jpeg",
+        "/ecommerce4.jpeg"
       ],
       tools: [
         { name: "Order Processing", icon: <FaCog /> },
@@ -215,9 +215,9 @@ const Portfolio = () => {
       technologies: ["Java Spring Boot", "MySQL", "WebSocket", "Bootstrap"],
       link: "#",
       images: [
-        "/twitter1_11zon.jpeg",
-        "/twitter2_11zon.jpeg",
         "/twitter3_11zon.jpeg",
+        "/twitter2_11zon.jpeg",
+        "/twitter1_11zon.jpeg",
         "/twitter4_11zon.jpeg"
       ],
       tools: [
@@ -246,7 +246,7 @@ const Portfolio = () => {
       ]
     },
     ...Array(2).fill({
-      title: "Dummy Project",
+      title: "More Projects Under development",
       description: "This is a placeholder for a future project. The details will be updated soon.",
       technologies: ["TBD"],
       link: "#",
