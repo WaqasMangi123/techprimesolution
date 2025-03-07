@@ -10,10 +10,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor", "Astra", "WP Forms"],
       link: "https://laritience.com/",
       images: [
-        "/laritience4.jpg", 
-        "/laritience2.jpg",
-        "/laritience3.jpg",
-        "/pro1.jpeg"
+        "/laritience4.jpeg", 
+        "/laritience2.jpeg",
+        "/laritience3.jpeg",
+        "/laritience1.jpeg"
       ],
       tools: [
         { name: "Course Registration", icon: <FaBook /> },
@@ -29,10 +29,10 @@ const Portfolio = () => {
       technologies: ["React JSX", "Node.js", "MongoDB"],
       link: "https://polarpainting.ca/",
       images: [
-        "/polarpaintingportfolio1.jpg",
-        "/polarpaintingportfolio2.jpg",
-        "/polarpaintingportfolio3.jpg",
-        "/polarpaintingportfolio4.jpg"
+        "/polarpaintingportfolio1.jpeg",
+        "/polarpaintingportfolio2.jpeg",
+        "/polarpaintingportfolio3.jpeg",
+        "/polarpaintingportfolio4.jpeg"
       ],
       tools: [
         { name: "Estimator by Techprime", icon: <FaCog /> },
@@ -67,10 +67,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor"],
       link: "#", 
       images: [
-        "/sona1.jpg",
-        "/sona2.jpg",
-        "/sona3.jpg",
-        "/sona4.jpg"
+        "/sona1.jpeg",
+        "/sona2.jpeg",
+        "/sona3.jpeg",
+        "/sona4.jpeg"
       ],
       tools: [
         { name: "Responsive Payment Method", icon: <FaCreditCard /> },
@@ -87,9 +87,9 @@ const Portfolio = () => {
       link: "#", 
       images: [
         "/sap7.jpeg",
-        "/sap2.jpg",
-        "/sap3.jpg",
-        "/sap4.jpg"
+        "/sap2.jpeg",
+        "/sap3.jpeg",
+        "/sap4.jpeg"
       ],
       tools: [
         { name: "Discussion Form", icon: <FaComments /> },
@@ -106,10 +106,10 @@ const Portfolio = () => {
       technologies: ["Python", "Django", "PostgreSQL", "Celery", "Twilio", "React", "Bootstrap"],
       link: "#",
       images: [
-        "/medischedule1.jpg",
-        "/medischedule2.jpg",
-        "/medischedule3.jpg",
-        "/medischedule4.jpg"
+        "/medischedule1_11zon.jpeg",
+        "/medischedule2_11zon.jpeg",
+        "/medischedule3_11zon.jpeg",
+        "/medischedule4_11zon.jpeg"
       ],
       tools: [
         { name: "Patient Booking", icon: <FaCalendarAlt /> },
@@ -125,10 +125,10 @@ const Portfolio = () => {
       technologies: ["Python", "Natural Language Processing", "Machine Learning"],
       link: "#",
       images: [
-        "/speech3.jpg",
-        "/speech1.jpg",
-        "/speech2.jpg",
-        "/speech4.jpg"
+        "/speech3_11zon.jpeg",
+        "/speech1_11zon.jpeg",
+        "/speech2_11zon.jpeg",
+        "/speech4_11zon.jpeg"
       ],
       tools: [
         { name: "Multilingual Support", icon: <FaComments /> },
@@ -143,10 +143,10 @@ const Portfolio = () => {
       technologies: ["Java", "MySQL"],
       link: "#",
       images: [
-        "/hospital1.jpg",
-        "/hospital2.jpg",
-        "/hospital3.jpg",
-        "/hospital4.jpg"
+        "/hospital1.jpeg",
+        "/hospital2.jpeg",
+        "/hospital3.jpeg",
+        "/hospital4.jpeg"
       ],
       tools: [
         { name: "Patient Registration", icon: <FaCog /> },
@@ -179,10 +179,10 @@ const Portfolio = () => {
       technologies: ["Java", "TensorFlow", "MySQL", "Node.js"],
       link: "#",
       images: [
-        "/lms1.jpg",
-        "/lms2.jpg",
-        "/lms3.jpg",
-        "/lms4.jpg"
+        "/lms1.jpeg",
+        "/lms2.jpeg",
+        "/lms3.jpeg",
+        "/lms4.jpeg"
       ],
       tools: [
         { name: "Course Creation", icon: <FaCog /> },
@@ -197,10 +197,10 @@ const Portfolio = () => {
       technologies: ["Java", "MySQL", "Spring Framework", "JavaFX", "REST APIs"],
       link: "#",
       images: [
-        "/pos1.jpg",
-        "/pos2.jpg",
-        "/pos3.jpg",
-        "/pos4.jpg"
+        "/pos1_11zon.jpeg",
+        "/pos2_11zon.jpeg",
+        "/pos3_11zon.jpeg",
+        "/pos4_11zon.jpeg"
       ],
       tools: [
         { name: "Barcode Scanning", icon: <FaCog /> },
@@ -215,10 +215,10 @@ const Portfolio = () => {
       technologies: ["Java Spring Boot", "MySQL", "WebSocket", "Bootstrap"],
       link: "#",
       images: [
-        "/twitter3.jpg",
-        "/twitter2.jpg",
-        "/twitter1.jpg",
-        "/twitter4.jpg"
+        "/twitter1_11zon.jpeg",
+        "/twitter2_11zon.jpeg",
+        "/twitter3_11zon.jpeg",
+        "/twitter4_11zon.jpeg"
       ],
       tools: [
         { name: "Real-time Tweeting", icon: <FaComments /> },
@@ -233,9 +233,9 @@ const Portfolio = () => {
       technologies: ["Java Spring Boot", "MySQL", "JavaFX", "WebSocket"],
       link: "#",
       images: [
-        "/solitaire1.jpg",
-        "/solitaire2.jpg",
-        "/solitaire3.jpg",
+        "/solitaire1_11zon.jpeg",
+        "/solitaire2_11zon.jpeg",
+        "/solitaire3_11zon.jpeg",
         "/solitaire4.jpg"
       ],
       tools: [
