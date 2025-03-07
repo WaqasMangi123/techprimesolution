@@ -10,10 +10,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor", "Astra", "WP Forms"],
       link: "https://laritience.com/",
       images: [
-        "/laritience4.jpg", // Absolute path from public folder
-        "/laritience2.jpg",
-        "/laritience3.jpg",
-        "/laritience1.jpg"
+        "laritience4.jpg", 
+        "laritience2.jpg",
+        "laritience3.jpg",
+        "laritience1.jpg"
       ],
       tools: [
         { name: "Course Registration", icon: <FaBook /> },
