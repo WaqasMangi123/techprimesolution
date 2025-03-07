@@ -8,43 +8,62 @@
 /* Digital marketing section */
 .digital-marketing {
     width: 100%;
-    height: 100vh; /* Adjust height for better mobile compatibility */
+    height: 100vh; /* Full viewport height for desktop */
     display: flex;
     align-items: center;
     justify-content: center;
     background: #000;
     position: relative;
+    overflow: hidden;
 }
 
 /* Full-screen image */
 .digital-marketing-image {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    transform: scale(1.1);
-    animation: fadeInScale 1.5s ease-out forwards;
+    object-fit: cover; /* Ensures the image covers the full container */
+    opacity: 0; /* Start with 0 opacity for fade-in animation */
+    transform: scale(1.1); /* Start slightly zoomed for animation */
+    animation: fadeInScale 1.5s ease-out forwards; /* Fade-in animation */
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out; /* Smooth transitions */
+}
+
+/* Hover effect on image (Disabled on Mobile) */
+@media (hover: hover) {
+    .digital-marketing:hover .digital-marketing-image {
+        transform: scale(1.1); /* Slight zoom effect */
+        opacity: 0.9; /* Faded effect for hover */
+    }
+}
+
+/* Smooth transition on container hover */
+@media (hover: hover) {
+    .digital-marketing:hover {
+        background-color: #1e1e1e; /* Darker background on hover */
+    }
+}
+
+/* Optional: add a subtle shadow effect on hover for better focus */
+@media (hover: hover) {
+    .digital-marketing:hover .digital-marketing-image {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .digital-marketing {
-        height: 40vh; /* Reduce height for smaller screens */
+        height: 60vh; /* Adjusted height for tablets */
     }
-    
+
     .digital-marketing-image {
-        height: 100%;
-        transform: scale(1); /* Adjust scale to prevent cropping */
+        transform: scale(1); /* Reset scale for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
     .digital-marketing {
-        height: 70vh; /* Further reduce height for very small screens */
-    }
-
-    .digital-marketing-image {
-        height: 100%;
+        height: 50vh; /* Adjusted height for mobile */
     }
 }
 
@@ -337,29 +356,29 @@
     border-radius: 20px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-  }
-  
-  /* Left Image */
-  .digital-marketing-block4-image-container {
+}
+
+/* Left Image */
+.digital-marketing-block4-image-container {
     flex: 1;
     overflow: hidden;
     border-radius: 10px;
-  }
-  
-  .digital-marketing-block4-image {
+}
+
+.digital-marketing-block4-image {
     width: 100%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-  }
-  
-  /* Right Text Section */
-  .digital-marketing-block4-text-container {
+}
+
+/* Right Text Section */
+.digital-marketing-block4-text-container {
     flex: 1;
     max-width: 500px;
-  }
-  
-  .digital-marketing-block4-heading {
+}
+
+.digital-marketing-block4-heading {
     font-size: 20px; /* Reduced font size */
     font-weight: 500;
     color: #004085;
@@ -367,16 +386,16 @@
     letter-spacing: 1px;
     text-transform: uppercase;
     line-height: 1.4;
-  }
-  
-  .digital-marketing-block4-description {
+}
+
+.digital-marketing-block4-description {
     font-size: 12px; /* Reduced font size */
     color: #555;
     line-height: 1.6;
     margin-bottom: 30px;
-  }
-  
-  .digital-marketing-block4-button {
+}
+
+.digital-marketing-block4-button {
     background-color: #004085;
     color: #fff;
     padding: 15px 30px;
@@ -386,39 +405,67 @@
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
-  }
-  
-  .digital-marketing-block4-button:hover {
+}
+
+.digital-marketing-block4-button:hover {
     background-color: #003366;
     transform: scale(1.1);
-  }
-  
-  /* Mobile Responsiveness */
-  @media screen and (max-width: 768px) {
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
     .digital-marketing-block4-container {
-      flex-direction: column;
-      padding: 50px 10px;
+        flex-direction: column; /* Stack image and text vertically */
+        padding: 40px 15px; /* Reduced padding for mobile */
+        gap: 30px; /* Reduced gap for mobile */
     }
-  
+
     .digital-marketing-block4-image-container,
     .digital-marketing-block4-text-container {
-      flex: none;
-      width: 100%;
+        flex: none;
+        width: 100%; /* Full width for mobile */
     }
-  
+
     .digital-marketing-block4-heading {
-      font-size: 24px; /* Further reduced font size for mobile */
+        font-size: 18px; /* Adjusted font size for mobile */
+        margin-bottom: 15px; /* Reduced margin for mobile */
+        text-align: center; /* Center-align heading */
     }
-  
+
     .digital-marketing-block4-description {
-      font-size: 14px; /* Further reduced font size for mobile */
+        font-size: 14px; /* Adjusted font size for mobile */
+        text-align: center; /* Center-align description */
+        margin-bottom: 20px; /* Reduced margin for mobile */
     }
-  
+
     .digital-marketing-block4-button {
-      width: 100%;
+        width: 100%; /* Full-width button for mobile */
+        padding: 12px 20px; /* Adjusted padding for mobile */
+        font-size: 14px; /* Adjusted font size for mobile */
+        text-align: center; /* Center-align button text */
     }
-  }
-  
+}
+
+/* Small Mobile Devices (e.g., iPhone SE) */
+@media screen and (max-width: 480px) {
+    .digital-marketing-block4-container {
+        padding: 30px 10px; /* Further reduced padding for small devices */
+        gap: 20px; /* Further reduced gap for small devices */
+    }
+
+    .digital-marketing-block4-heading {
+        font-size: 16px; /* Further reduced font size for small devices */
+    }
+
+    .digital-marketing-block4-description {
+        font-size: 12px; /* Further reduced font size for small devices */
+    }
+
+    .digital-marketing-block4-button {
+        padding: 10px 15px; /* Further reduced padding for small devices */
+        font-size: 12px; /* Further reduced font size for small devices */
+    }
+}
 
 
 
@@ -427,13 +474,14 @@
 /* Block 4 - Premium Side Image and Text */
 .digital-marketing-block4 {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stack items vertically on mobile */
+    justify-content: center;
     align-items: center;
-    padding: 80px 50px;
+    padding: 60px 25px; /* Adjusted padding for mobile */
     background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
     border-radius: 25px;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    margin-top: 100px;
+    margin-top: 70px; /* Adjusted margin for mobile */
     transition: all 0.4s ease-in-out;
     transform: translateY(0);
     overflow: hidden;
@@ -448,20 +496,45 @@
 /* Content layout */
 .digital-marketing-block4-content {
     display: flex;
+    flex-direction: column; /* Stack items vertically on mobile */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
-    gap: 40px;
+    gap: 30px; /* Adjusted gap for mobile */
 }
 
+/* Image comes first on mobile */
+.digital-marketing-block4-image {
+    width: 100%; /* Full width on mobile */
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    animation: slideInFromRight 1s ease-out forwards;
+}
+
+.digital-marketing-block4-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: transform 0.4s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(0.95);
+}
+
+.digital-marketing-block4-image img:hover {
+    transform: scale(1.06);
+    filter: brightness(1);
+}
+
+/* Text content */
 .digital-marketing-block4-text {
-    width: 50%;
-    padding-right: 40px;
+    width: 100%; /* Full width on mobile */
+    text-align: center; /* Center text on mobile */
     animation: slideInFromLeft 1s ease-out forwards;
 }
 
 .digital-marketing-block4-text h2 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Adjusted font size for mobile */
     font-weight: 900;
     color: #1c3d80;
     margin-bottom: 20px;
@@ -484,7 +557,7 @@
 
 /* Modern button design */
 .digital-marketing-button {
-    padding: 16px 45px;
+    padding: 14px 35px; /* Adjusted padding for mobile */
     font-size: 1.2rem;
     font-weight: 700;
     color: white;
@@ -509,29 +582,6 @@
     outline: none;
 }
 
-/* Enhanced Image Styling */
-.digital-marketing-block4-image {
-    width: 50%;
-    border-radius: 25px;
-    overflow: hidden;
-    position: relative;
-    animation: slideInFromRight 1s ease-out forwards;
-}
-
-.digital-marketing-block4-image img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 25px;
-    transition: transform 0.4s ease-in-out, filter 0.3s ease-in-out;
-    filter: brightness(0.95);
-}
-
-.digital-marketing-block4-image img:hover {
-    transform: scale(1.06);
-    filter: brightness(1);
-}
-
 /* Keyframe Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -548,33 +598,37 @@
     to { transform: translateX(0); opacity: 1; }
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
+/* Responsive Design for Larger Screens */
+@media (min-width: 768px) {
     .digital-marketing-block4 {
-        flex-direction: column;
-        padding: 60px 25px;
-        margin-top: 70px;
+        flex-direction: row; /* Side-by-side layout on larger screens */
+        padding: 80px 50px; /* Adjusted padding for larger screens */
+        margin-top: 100px; /* Adjusted margin for larger screens */
+    }
+
+    .digital-marketing-block4-content {
+        flex-direction: row; /* Side-by-side layout on larger screens */
+        gap: 40px; /* Adjusted gap for larger screens */
     }
 
     .digital-marketing-block4-text {
-        width: 100%;
-        padding-right: 0;
-        text-align: center;
+        width: 50%; /* Half width on larger screens */
+        text-align: left; /* Align text to the left on larger screens */
+        padding-right: 40px; /* Add padding on larger screens */
     }
 
     .digital-marketing-block4-text h2 {
-        font-size: 2.5rem;
+        font-size: 3rem; /* Adjusted font size for larger screens */
     }
 
     .digital-marketing-button {
-        padding: 14px 35px;
+        padding: 16px 45px; /* Adjusted padding for larger screens */
     }
 
     .digital-marketing-block4-image {
-        width: 100%;
+        width: 50%; /* Half width on larger screens */
     }
 }
-
   
 
 

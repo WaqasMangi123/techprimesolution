@@ -1,40 +1,76 @@
-/* Full-page Image Block */
-.full-page-image {
+/* Container for the contact image */
+.contact-image-container {
     position: relative;
     width: 100%;
     height: 100vh; /* Full viewport height */
     overflow: hidden; /* Hide overflowed content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light background for contrast */
+    transition: all 0.5s ease-in-out;
 }
 
-/* Image Styling */
-.full-page-image .image {
+/* Image style with hover effects */
+.contact-full-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the screen */
+    object-fit: cover; /* Ensures image covers the full viewport */
     opacity: 0.85; /* Slightly fade for better text visibility */
-    transition: transform 1s ease-in-out; /* Smooth animation */
+    transition: transform 1s ease-in-out, opacity 0.5s ease-in-out;
 }
 
-/* Hover Effect (Disabled on Mobile) */
+/* Hover effect on image (Disabled on Mobile) */
 @media (hover: hover) {
-    .full-page-image:hover .image {
-        transform: scale(1.1); /* Zoom in on hover */
+    .contact-image-container:hover .contact-full-image {
+        transform: scale(1.1); /* Slight zoom effect */
+        opacity: 0.9; /* Faded effect for hover */
+    }
+}
+
+/* Animation for initial load */
+.contact-full-image {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Smooth transition on container hover */
+@media (hover: hover) {
+    .contact-image-container:hover {
+        background-color: #1e1e1e; /* Darker background on hover */
+    }
+}
+
+/* Optional: add a subtle shadow effect on hover for better focus */
+@media (hover: hover) {
+    .contact-image-container:hover .contact-full-image {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
 }
 
 /* Mobile Optimization */
 @media (max-width: 768px) {
-    .full-page-image {
+    .contact-image-container {
         height: 60vh; /* Reduce height on smaller screens */
     }
 
-    .full-page-image .image {
+    .contact-full-image {
         opacity: 0.9; /* Increase opacity for better visibility */
     }
 }
 
 @media (max-width: 480px) {
-    .full-page-image {
+    .contact-image-container {
         height: 50vh; /* Adjust height for mobile */
     }
 }

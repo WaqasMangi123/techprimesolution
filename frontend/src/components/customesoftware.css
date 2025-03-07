@@ -61,50 +61,53 @@
 }
 
 /* Buttons */
+/* Buttons */
 .custom-software-buttons {
-    display: flex;
-    gap: 20px;
+  display: flex;
+  gap: 20px;
 }
 
 .custom-btn {
-    padding: 12px 24px;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    border-radius: 8px;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.3s ease-in-out;
-    position: relative;
-    z-index: 2;
-    cursor: pointer;
-    border: none;
-    outline: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
+/* Primary Button - Gradient Blue */
 .primary-btn {
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
-    box-shadow: 0 6px 15px rgb(0, 123, 255);
+  background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.5); /* Blue shadow */
 }
 
 .primary-btn:hover {
-    background: linear-gradient(135deg, #0056b3, #003f8a);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5);
+  background: linear-gradient(135deg, #0056b3, #003f8a); /* Darker blue gradient */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.5); /* Enhanced blue shadow */
 }
 
+/* Secondary Button - Solid Blue */
 .secondary-btn {
-  background: #1a73e8; /* Blue background */
-  color: rgb(8, 128, 197); /* White text */
-  border: 2px solid rgba(13, 87, 156, 0.952); /* Border color */
+  background: #007bff; /* Solid blue background */
+  color: white; /* White text */
+  border: 2px solid rgb(5, 35, 168); /* Subtle border for depth */
   backdrop-filter: blur(5px); /* Optional: Adds a blur effect */
   transition: background 0.3s ease, transform 0.3s ease; /* Smooth transition */
 }
 
 .secondary-btn:hover {
-  background: #1557b3; /* Darker blue on hover */
-  border-color: rgba(19, 94, 235, 0.5); /* Border color on hover */
+  background: #0056b3; /* Darker blue on hover */
+  border-color: rgb(8, 116, 218); /* Brighter border on hover */
   transform: translateY(-3px); /* Slight lift on hover */
 }
 /* Right Side - Image */

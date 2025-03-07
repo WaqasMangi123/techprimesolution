@@ -23,7 +23,7 @@
   .unique-block1-image {
       animation: zoomIn 5s ease-in-out infinite alternate;
   }
-  
+
   .unique-block1:hover .unique-block1-image {
       transform: scale(1.1);
   }
@@ -42,15 +42,18 @@
 /* Mobile & Tablet Optimization */
 @media (max-width: 768px) {
   .unique-block1 {
-      height: 80vh; /* Adjusted height for better mobile experience */
+      height: 40vh; /* Adjusted height for mobile, matching machine-learning-image-block */
   }
 
   .unique-block1-image {
       animation: none; /* Remove zoom animation for mobile */
   }
+
+  /* Disable hover effects on mobile */
+  .unique-block1:hover .unique-block1-image {
+      transform: scale(1); /* No zoom effect on mobile */
+  }
 }
-
-
 
 
 
