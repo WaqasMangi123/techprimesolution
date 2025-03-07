@@ -13,7 +13,7 @@ const Portfolio = () => {
         "/laritience4.jpg", 
         "/laritience2.jpg",
         "/laritience3.jpg",
-        "/laritience1.jpg"
+        "/pro1.jpeg"
       ],
       tools: [
         { name: "Course Registration", icon: <FaBook /> },
