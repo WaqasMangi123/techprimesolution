@@ -6,14 +6,14 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Laritience",
-      description: "Laritience was founded by Rigo, a driving instructor with extensive experience in both the UK and Canada. After years of teaching at various driving schools across Ontario, Rigo gained a reputation for his unique, student-centered approach. Many students who struggled elsewhere found success and confidence through his supportive and hands-on teaching style.",
+      description: "Laritience was founded by Rigo...",
       technologies: ["WordPress", "Elementor", "Astra", "WP Forms"],
       link: "https://laritience.com/",
       images: [
-        "laritience4.jpg",
-        "laritience2.jpg",
-        "laritience3.jpg",
-        "laritience1.jpg"
+        "/laritience4.jpg", // Absolute path from public folder
+        "/laritience2.jpg",
+        "/laritience3.jpg",
+        "/laritience1.jpg"
       ],
       tools: [
         { name: "Course Registration", icon: <FaBook /> },
