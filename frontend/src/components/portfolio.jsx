@@ -10,10 +10,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor", "Astra", "WP Forms"],
       link: "https://laritience.com/",
       images: [
-        "laritience4.jpg", 
-        "laritience2.jpg",
-        "laritience3.jpg",
-        "laritience1.jpg"
+        "/laritience4.jpg", 
+        "/laritience2.jpg",
+        "/laritience3.jpg",
+        "/laritience1.jpg"
       ],
       tools: [
         { name: "Course Registration", icon: <FaBook /> },
@@ -23,17 +23,16 @@ const Portfolio = () => {
         { name: "SEO Optimization", icon: <FaSearch /> }
       ]
     },
-   
     {
       title: "Polar Painting",
       description: "Polar Painting is a trusted provider of residential and commercial painting services in Toronto. We specialize in transforming spaces with precision, care, and attention to detail. Our expert painters use premium materials and innovative techniques to deliver exceptional results that last for years to come.",
       technologies: ["React JSX", "Node.js", "MongoDB"],
       link: "https://polarpainting.ca/",
       images: [
-        "polarpaintingportfolio1.jpg",
-        "polarpaintingportfolio2.jpg",
-        "polarpaintingportfolio3.jpg",
-        "polarpaintingportfolio4.jpg"
+        "/polarpaintingportfolio1.jpg",
+        "/polarpaintingportfolio2.jpg",
+        "/polarpaintingportfolio3.jpg",
+        "/polarpaintingportfolio4.jpg"
       ],
       tools: [
         { name: "Estimator by Techprime", icon: <FaCog /> },
@@ -68,10 +67,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor"],
       link: "#", 
       images: [
-        "sona1.jpg",
-        "sona2.jpg",
-        "sona3.jpg",
-        "sona4.jpg"
+        "/sona1.jpg",
+        "/sona2.jpg",
+        "/sona3.jpg",
+        "/sona4.jpg"
       ],
       tools: [
         { name: "Responsive Payment Method", icon: <FaCreditCard /> },
@@ -87,10 +86,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor"],
       link: "#", 
       images: [
-        "sap7.jpeg",
-        "sap2.jpg",
-        "sap3.jpg",
-        "sap4.jpg"
+        "/sap7.jpeg",
+        "/sap2.jpg",
+        "/sap3.jpg",
+        "/sap4.jpg"
       ],
       tools: [
         { name: "Discussion Form", icon: <FaComments /> },
@@ -107,10 +106,10 @@ const Portfolio = () => {
       technologies: ["Python", "Django", "PostgreSQL", "Celery", "Twilio", "React", "Bootstrap"],
       link: "#",
       images: [
-        "medischedule1.jpg",
-        "medischedule2.jpg",
-        "medischedule3.jpg",
-        "medischedule4.jpg"
+        "/medischedule1.jpg",
+        "/medischedule2.jpg",
+        "/medischedule3.jpg",
+        "/medischedule4.jpg"
       ],
       tools: [
         { name: "Patient Booking", icon: <FaCalendarAlt /> },
@@ -126,10 +125,10 @@ const Portfolio = () => {
       technologies: ["Python", "Natural Language Processing", "Machine Learning"],
       link: "#",
       images: [
-        "speech3.jpg",
-        "speech1.jpg",
-        "speech2.jpg",
-        "speech4.jpg"
+        "/speech3.jpg",
+        "/speech1.jpg",
+        "/speech2.jpg",
+        "/speech4.jpg"
       ],
       tools: [
         { name: "Multilingual Support", icon: <FaComments /> },
@@ -144,10 +143,10 @@ const Portfolio = () => {
       technologies: ["Java", "MySQL"],
       link: "#",
       images: [
-        "hospital1.jpg",
-        "hospital2.jpg",
-        "hospital3.jpg",
-        "hospital4.jpg"
+        "/hospital1.jpg",
+        "/hospital2.jpg",
+        "/hospital3.jpg",
+        "/hospital4.jpg"
       ],
       tools: [
         { name: "Patient Registration", icon: <FaCog /> },
@@ -162,10 +161,10 @@ const Portfolio = () => {
       technologies: ["Java", "JavaSpringBoot", "MySQL", "React"],
       link: "#",
       images: [
-        "ecommerce1.jpg",
-        "ecommerce2.jpg",
-        "ecommerce3.jpg",
-        "ecommerce4.jpg"
+        "/ecommerce1.jpg",
+        "/ecommerce2.jpg",
+        "/ecommerce3.jpg",
+        "/ecommerce4.jpg"
       ],
       tools: [
         { name: "Order Processing", icon: <FaCog /> },
@@ -180,10 +179,10 @@ const Portfolio = () => {
       technologies: ["Java", "TensorFlow", "MySQL", "Node.js"],
       link: "#",
       images: [
-        "lms1.jpg",
-        "lms2.jpg",
-        "lms3.jpg",
-        "lms4.jpg"
+        "/lms1.jpg",
+        "/lms2.jpg",
+        "/lms3.jpg",
+        "/lms4.jpg"
       ],
       tools: [
         { name: "Course Creation", icon: <FaCog /> },
@@ -198,10 +197,10 @@ const Portfolio = () => {
       technologies: ["Java", "MySQL", "Spring Framework", "JavaFX", "REST APIs"],
       link: "#",
       images: [
-        "pos1.jpg",
-        "pos2.jpg",
-        "pos3.jpg",
-        "pos4.jpg"
+        "/pos1.jpg",
+        "/pos2.jpg",
+        "/pos3.jpg",
+        "/pos4.jpg"
       ],
       tools: [
         { name: "Barcode Scanning", icon: <FaCog /> },
@@ -216,10 +215,10 @@ const Portfolio = () => {
       technologies: ["Java Spring Boot", "MySQL", "WebSocket", "Bootstrap"],
       link: "#",
       images: [
-        "twitter3.jpg",
-        "twitter2.jpg",
-        "twitter1.jpg",
-        "twitter4.jpg"
+        "/twitter3.jpg",
+        "/twitter2.jpg",
+        "/twitter1.jpg",
+        "/twitter4.jpg"
       ],
       tools: [
         { name: "Real-time Tweeting", icon: <FaComments /> },
@@ -234,10 +233,10 @@ const Portfolio = () => {
       technologies: ["Java Spring Boot", "MySQL", "JavaFX", "WebSocket"],
       link: "#",
       images: [
-        "solitaire1.jpg",
-        "solitaire2.jpg",
-        "solitaire3.jpg",
-        "solitaire4.jpg"
+        "/solitaire1.jpg",
+        "/solitaire2.jpg",
+        "/solitaire3.jpg",
+        "/solitaire4.jpg"
       ],
       tools: [
         { name: "Customizable Themes", icon: <FaPaintBrush /> },
@@ -252,10 +251,10 @@ const Portfolio = () => {
       technologies: ["TBD"],
       link: "#",
       images: [
-        "dummy1.jpg",
-        "dummy2.jpg",
-        "dummy3.jpg",
-        "dummy4.jpg"
+        "/dummy1.jpg",
+        "/dummy2.jpg",
+        "/dummy3.jpg",
+        "/dummy4.jpg"
       ],
       tools: [
         { name: "TBD", icon: <FaCog /> }
@@ -266,7 +265,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio">
       <div className="portfolio-block1">
-        <img src="portfolioblock1.jpg" alt="Portfolio Showcase" className="portfolio-image" />
+        <img src="/portfolioblock1.jpg" alt="Portfolio Showcase" className="portfolio-image" />
       </div>
 
       <section className="projects-section">
