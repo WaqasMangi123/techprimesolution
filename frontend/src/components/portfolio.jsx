@@ -10,10 +10,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor", "Astra", "WP Forms"],
       link: "https://laritience.com/",
       images: [
-        "laritience4.jpg",
-        "laritience2.jpg",
-        "laritience3.jpg",
-        "laritience1.jpg"
+        "laritience4.jpeg",
+        "laritience2.jpeg",
+        "laritience3.jpeg",
+        "laritience1.jpeg"
       ],
       tools: [
         { name: "Course Registration", icon: <FaBook /> },
@@ -30,10 +30,10 @@ const Portfolio = () => {
       technologies: ["React JSX", "Node.js", "MongoDB"],
       link: "https://polarpainting.ca/",
       images: [
-        "polarpaintingportfolio1.jpg",
-        "polarpaintingportfolio2.jpg",
-        "polarpaintingportfolio3.jpg",
-        "polarpaintingportfolio4.jpg"
+        "polarpaintingportfolio1.jpeg",
+        "polarpaintingportfolio2.jpeg",
+        "polarpaintingportfolio3.jpeg",
+        "polarpaintingportfolio4.jpeg"
       ],
       tools: [
         { name: "Estimator by Techprime", icon: <FaCog /> },
@@ -68,10 +68,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor"],
       link: "#", 
       images: [
-        "sona1.jpg",
-        "sona2.jpg",
-        "sona3.jpg",
-        "sona4.jpg"
+        "sona1.jpeg",
+        "sona2.jpeg",
+        "sona3.jpeg",
+        "sona4.jpeg"
       ],
       tools: [
         { name: "Responsive Payment Method", icon: <FaCreditCard /> },
@@ -88,9 +88,9 @@ const Portfolio = () => {
       link: "#", 
       images: [
         "sap7.jpeg",
-        "sap2.jpg",
-        "sap3.jpg",
-        "sap4.jpg"
+        "sap2.jpeg",
+        "sap3.jpeg",
+        "sap4.jpeg"
       ],
       tools: [
         { name: "Discussion Form", icon: <FaComments /> },
