@@ -45,7 +45,21 @@ const Navbar = () => {
           <Link to="/" onClick={toggleMobileMenu}>Home</Link>
         </li>
 
-       
+        {/* About Dropdown */}
+        <li className="dropdown">
+          <div className="dropdown-link" onClick={toggleAboutDropdown}>
+            <span>About</span>
+            {isAboutDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
+          </div>
+          <ul className={`dropdown-menu ${isAboutDropdownOpen ? "mobile-open" : ""}`}>
+            <li>
+              <Link to="/about" onClick={toggleMobileMenu}>About Us</Link>
+            </li>
+            <li>
+              <Link to="/foundingmembers" onClick={toggleMobileMenu}>Founding Member</Link>
+            </li>
+          </ul>
+        </li>
 
         {/* Services Dropdown */}
         <li className="dropdown">
@@ -69,21 +83,7 @@ const Navbar = () => {
             <li><Link to="/customesoftwaredevelopment" onClick={toggleMobileMenu}>Custom Software Development</Link></li>
           </ul>
         </li>
-  {/* About Dropdown */}
-  <li className="dropdown">
-          <div className="dropdown-link" onClick={toggleAboutDropdown}>
-            <span>About</span>
-            {isAboutDropdownOpen ? <FaChevronUp /> : <FaChevronDown />}
-          </div>
-          <ul className={`dropdown-menu ${isAboutDropdownOpen ? "mobile-open" : ""}`}>
-            <li>
-              <Link to="/about" onClick={toggleMobileMenu}>About Us</Link>
-            </li>
-            <li>
-              <Link to="/foundingmembers" onClick={toggleMobileMenu}>Founding Member</Link>
-            </li>
-          </ul>
-        </li>
+
         <li>
           <Link to="/portfolio" onClick={toggleMobileMenu}>Portfolio</Link>
         </li>
@@ -99,9 +99,10 @@ const Navbar = () => {
       </ul>
 
       {/* Nav Buttons */}
-      <div className="nav-buttons">
-        <button className="phone-btn">Contact Us</button>
-      </div>
+      {/* Nav Buttons */}
+      <div className="contact-btn-container">
+  <Link to="/contact" className="contact-btn-link">Contact Us</Link>
+</div>
     </nav>
   );
 };

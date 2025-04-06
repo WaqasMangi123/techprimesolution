@@ -48,7 +48,7 @@ const Home = () => {
     {
       icon: <FaSearch />,
       title: "SEO Optimization",
-      description: "Enhance your website’s visibility and rank higher on search engines.",
+      description: "Enhance your website's visibility and rank higher on search engines.",
     },
     {
       icon: <FaRegLightbulb />,
@@ -123,32 +123,6 @@ const Home = () => {
     { icon: <DiGithubBadge />, name: "GitHub" },
   ];
 
-  const serviceSliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   const techSliderSettings = {
     dots: false,
     infinite: true,
@@ -204,7 +178,7 @@ const Home = () => {
       {/* Second Block - Services Section */}
       <div className="services-container">
         <h2 className="section-title">Our Services</h2>
-        <Slider {...serviceSliderSettings}>
+        <div className="services-grid">
           {services.map((service, index) => (
             <div key={index} className="service-card">
               <div className="service-icon">{service.icon}</div>
@@ -213,7 +187,7 @@ const Home = () => {
               <button className="service-btn">Read More</button>
             </div>
           ))}
-        </Slider>
+        </div>
       </div>
 
       {/* Third Block - Unique Additional Section */}

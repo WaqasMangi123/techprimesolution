@@ -573,169 +573,259 @@
 
 
 
-/* Technologies We Use Block */
+/* Technologies We Use Block - Enhanced Professional Design */
 .technologies-we-use-block {
-    padding: 6rem 2rem;
-    background-color: #ffffff;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .technologies-we-use-heading-container {
-    margin-bottom: 3rem;
+  padding: 8rem 2rem;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.technologies-we-use-heading-container {
+  margin-bottom: 4rem;
+  max-width: 1200px;
+  padding: 0 2rem;
+}
+
+.technologies-we-use-heading {
+  font-size: 3.5rem;
+  color: #1e293b;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.2;
+  position: relative;
+  display: inline-block;
+}
+
+.technologies-we-use-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  margin: 1.5rem auto 0;
+  border-radius: 2px;
+}
+
+.technologies-we-use-description {
+  font-size: 1.25rem;
+  color: #475569;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+}
+
+.technologies-swiper {
+  width: 100%;
+  padding: 3rem 0;
+  max-width: 1400px;
+}
+
+.technology-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  margin: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+}
+
+.technology-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 100%);
+  transition: height 0.3s ease;
+}
+
+.technology-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.2);
+}
+
+.technology-card:hover::before {
+  height: 100%;
+  opacity: 0.03;
+}
+
+.technology-icon {
+  font-size: 4rem;
+  color: #3b82f6;
+  margin-bottom: 2rem;
+  transition: all 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.technology-card:hover .technology-icon {
+  transform: scale(1.1);
+  color: #2563eb;
+}
+
+.technology-title {
+  font-size: 1.5rem;
+  color: #1e293b;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  z-index: 2;
+  transition: color 0.3s ease;
+}
+
+.technology-card:hover .technology-title {
+  color: #2563eb;
+}
+
+.technology-description {
+  font-size: 1rem;
+  color: #64748b;
+  text-align: center;
+  line-height: 1.7;
+  position: relative;
+  z-index: 2;
+}
+
+/* Swiper Navigation and Pagination Styles */
+.swiper-pagination-bullet {
+  background: #3b82f6 !important;
+  opacity: 0.3 !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 8px !important;
+  transition: all 0.3s ease !important;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1 !important;
+  background: #3b82f6 !important;
+  transform: scale(1.2);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #3b82f6 !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 50% !important;
+  width: 50px !important;
+  height: 50px !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.3s ease !important;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 1.5rem !important;
+  font-weight: bold !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: rgba(59, 130, 246, 0.1) !important;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .technologies-we-use-block {
+      padding: 6rem 2rem;
   }
   
   .technologies-we-use-heading {
-    font-size: 3rem;
-    color: #2c3e50;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .technologies-we-use-description {
-    font-size: 1.25rem;
-    color: #666;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.6;
-  }
-  
-  .technologies-swiper {
-    width: 100%;
-    padding: 2rem 0;
+      font-size: 3rem;
   }
   
   .technology-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-    background: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid #e0e0e0;
-    margin: 1rem;
+      padding: 2.5rem 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .technologies-we-use-block {
+      padding: 5rem 1.5rem;
+      min-height: auto;
   }
   
-  .technology-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 24px rgba(0, 123, 255, 0.2);
-    border-color: #007bff;
+  .technologies-we-use-heading {
+      font-size: 2.5rem;
+  }
+  
+  .technologies-we-use-description {
+      font-size: 1.1rem;
+  }
+  
+  .technology-card {
+      padding: 2rem 1.5rem;
   }
   
   .technology-icon {
-    font-size: 3.5rem;
-    color: #007bff;
-    margin-bottom: 1.5rem;
-    transition: color 0.3s ease;
-  }
-  
-  .technology-card:hover .technology-icon {
-    color: #0056b3;
+      font-size: 3.5rem;
   }
   
   .technology-title {
-    font-size: 1.5rem;
-    color: #2c3e50;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-  }
-  
-  .technology-description {
-    font-size: 1rem;
-    color: #666;
-    text-align: center;
-    line-height: 1.5;
-  }
-  
-  /* Swiper Navigation and Pagination Styles */
-  .swiper-pagination-bullet {
-    background: #007bff !important;
-    opacity: 0.5 !important;
-    width: 12px !important;
-    height: 12px !important;
-    margin: 0 8px !important;
-  }
-  
-  .swiper-pagination-bullet-active {
-    opacity: 1 !important;
-    background: #007bff !important;
+      font-size: 1.3rem;
   }
   
   .swiper-button-next,
   .swiper-button-prev {
-    color: #007bff !important;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    width: 40px !important;
-    height: 40px !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: background 0.3s ease;
+      width: 40px !important;
+      height: 40px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .technologies-we-use-block {
+      padding: 4rem 1rem;
   }
   
-  .swiper-button-next:hover,
-  .swiper-button-prev:hover {
-    background: rgba(0, 123, 255, 0.1);
+  .technologies-we-use-heading {
+      font-size: 2.2rem;
   }
   
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .technologies-we-use-heading {
-      font-size: 2.5rem;
-    }
-  
-    .technologies-we-use-description {
-      font-size: 1.1rem;
-    }
-  
-    .technology-card {
-      padding: 1.5rem;
-    }
-  
-    .technology-icon {
-      font-size: 3rem;
-    }
-  
-    .technology-title {
-      font-size: 1.3rem;
-    }
-  
-    .technology-description {
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .technologies-we-use-heading {
-      font-size: 2rem;
-    }
-  
-    .technologies-we-use-description {
+  .technologies-we-use-description {
       font-size: 1rem;
-    }
-  
-    .technology-card {
-      padding: 1rem;
-    }
-  
-    .technology-icon {
-      font-size: 2.5rem;
-    }
-  
-    .technology-title {
-      font-size: 1.1rem;
-    }
-  
-    .technology-description {
-      font-size: 0.8rem;
-    }
   }
+  
+  .technology-card {
+      padding: 1.5rem 1rem;
+  }
+  
+  .technology-icon {
+      font-size: 3rem;
+  }
+  
+  .technology-title {
+      font-size: 1.2rem;
+  }
+  
+  .swiper-button-next,
+  .swiper-button-prev {
+      display: none !important;
+  }
+}
   
 
 

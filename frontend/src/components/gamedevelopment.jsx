@@ -229,16 +229,27 @@ function GameDevelopment() {
     <Swiper
       slidesPerView={4}
       spaceBetween={30}
-      autoplay={{
-        delay: 2500,
-        disableOnInteraction: false,
-      }}
+      navigation={true}
       pagination={{
         clickable: true,
       }}
-      navigation={true}
-      modules={[Autoplay, Pagination, Navigation]}
+      modules={[Pagination, Navigation]}
       className="technologies-swiper"
+      breakpoints={{
+        // Responsive breakpoints
+        320: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 25
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 30
+        }
+      }}
     >
       {/* Firebase */}
       <SwiperSlide>

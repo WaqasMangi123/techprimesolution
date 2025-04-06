@@ -6,14 +6,14 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Laritience",
-      description: "Laritience was founded by Rigo...",
+      description: "Laritience was founded by Rigo, a driving instructor with extensive experience in both the UK and Canada. After years of teaching at various driving schools across Ontario, Rigo gained a reputation for his unique, student-centered approach. Many students who struggled elsewhere found success and confidence through his supportive and hands-on teaching style.",
       technologies: ["WordPress", "Elementor", "Astra", "WP Forms"],
       link: "https://laritience.com/",
       images: [
-        "/laritience4.jpeg", 
-        "/laritience2.jpeg",
-        "/laritience3.jpeg",
-        "/laritience1.jpeg"
+        "laritience4.jpg",
+        "laritience2.jpg",
+        "laritience3.jpg",
+        "laritience1.jpg"
       ],
       tools: [
         { name: "Course Registration", icon: <FaBook /> },
@@ -23,16 +23,17 @@ const Portfolio = () => {
         { name: "SEO Optimization", icon: <FaSearch /> }
       ]
     },
+   
     {
       title: "Polar Painting",
       description: "Polar Painting is a trusted provider of residential and commercial painting services in Toronto. We specialize in transforming spaces with precision, care, and attention to detail. Our expert painters use premium materials and innovative techniques to deliver exceptional results that last for years to come.",
       technologies: ["React JSX", "Node.js", "MongoDB"],
       link: "https://polarpainting.ca/",
       images: [
-        "/polarpaintingportfolio1.jpeg",
-        "/polarpaintingportfolio2.jpeg",
-        "/polarpaintingportfolio3.jpeg",
-        "/polarpaintingportfolio4.jpeg"
+        "polarpaintingportfolio1.jpg",
+        "polarpaintingportfolio2.jpg",
+        "polarpaintingportfolio3.jpg",
+        "polarpaintingportfolio4.jpg"
       ],
       tools: [
         { name: "Estimator by Techprime", icon: <FaCog /> },
@@ -67,10 +68,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor"],
       link: "#", 
       images: [
-        "/sona1.jpeg",
-        "/sona2.jpeg",
-        "/sona33.jpeg",
-        "/sona4.jpeg"
+        "sona1.jpg",
+        "sona2.jpg",
+        "sona3.jpg",
+        "sona4.jpg"
       ],
       tools: [
         { name: "Responsive Payment Method", icon: <FaCreditCard /> },
@@ -86,10 +87,10 @@ const Portfolio = () => {
       technologies: ["WordPress", "Elementor"],
       link: "#", 
       images: [
-        "/sap7.jpeg",
-        "/sap2.jpeg",
-        "/sap3.jpeg",
-        "/sap4.jpeg"
+        "sap7.jpeg",
+        "sap2.jpg",
+        "sap3.jpg",
+        "sap4.jpg"
       ],
       tools: [
         { name: "Discussion Form", icon: <FaComments /> },
@@ -106,10 +107,10 @@ const Portfolio = () => {
       technologies: ["Python", "Django", "PostgreSQL", "Celery", "Twilio", "React", "Bootstrap"],
       link: "#",
       images: [
-        "/medischedule1_11zon.jpeg",
-        "/medischedule2_11zon.jpeg",
-        "/medischedule3_11zon.jpeg",
-        "/medischedule4_11zon.jpeg"
+        "medischedule1.jpg",
+        "medischedule2.jpg",
+        "medischedule3.jpg",
+        "medischedule4.jpg"
       ],
       tools: [
         { name: "Patient Booking", icon: <FaCalendarAlt /> },
@@ -125,10 +126,10 @@ const Portfolio = () => {
       technologies: ["Python", "Natural Language Processing", "Machine Learning"],
       link: "#",
       images: [
-        "/speech3_11zon.jpeg",
-        "/speech1_11zon.jpeg",
-        "/speech2_11zon.jpeg",
-        "/speech4_11zon.jpeg"
+        "speech3.jpg",
+        "speech1.jpg",
+        "speech2.jpg",
+        "speech4.jpg"
       ],
       tools: [
         { name: "Multilingual Support", icon: <FaComments /> },
@@ -143,10 +144,10 @@ const Portfolio = () => {
       technologies: ["Java", "MySQL"],
       link: "#",
       images: [
-        "/hospital1.jpeg",
-        "/hospital2.jpeg",
-        "/hospital3.jpeg",
-        "/hospital4.jpeg"
+        "hospital1.jpg",
+        "hospital2.jpg",
+        "hospital3.jpg",
+        "hospital4.jpg"
       ],
       tools: [
         { name: "Patient Registration", icon: <FaCog /> },
@@ -161,10 +162,10 @@ const Portfolio = () => {
       technologies: ["Java", "JavaSpringBoot", "MySQL", "React"],
       link: "#",
       images: [
-        "/ecommerce11.jpeg",
-        "/ecommerce2.jpeg",
-        "/ecommerce3.jpeg",
-        "/ecommerce4.jpeg"
+        "ecommerce1.jpg",
+        "ecommerce2.jpg",
+        "ecommerce3.jpg",
+        "ecommerce4.jpg"
       ],
       tools: [
         { name: "Order Processing", icon: <FaCog /> },
@@ -179,10 +180,10 @@ const Portfolio = () => {
       technologies: ["Java", "TensorFlow", "MySQL", "Node.js"],
       link: "#",
       images: [
-        "/lms1.jpeg",
-        "/lms2.jpeg",
-        "/lms3.jpeg",
-        "/lms4.jpeg"
+        "lms1.jpg",
+        "lms2.jpg",
+        "lms3.jpg",
+        "lms4.jpg"
       ],
       tools: [
         { name: "Course Creation", icon: <FaCog /> },
@@ -197,10 +198,10 @@ const Portfolio = () => {
       technologies: ["Java", "MySQL", "Spring Framework", "JavaFX", "REST APIs"],
       link: "#",
       images: [
-        "/pos1_11zon.jpeg",
-        "/pos2_11zon.jpeg",
-        "/pos3_11zon.jpeg",
-        "/pos4_11zon.jpeg"
+        "pos1.jpg",
+        "pos2.jpg",
+        "pos3.jpg",
+        "pos4.jpg"
       ],
       tools: [
         { name: "Barcode Scanning", icon: <FaCog /> },
@@ -215,10 +216,10 @@ const Portfolio = () => {
       technologies: ["Java Spring Boot", "MySQL", "WebSocket", "Bootstrap"],
       link: "#",
       images: [
-        "/twitter3_11zon.jpeg",
-        "/twitter2_11zon.jpeg",
-        "/twitter1_11zon.jpeg",
-        "/twitter4_11zon.jpeg"
+        "twitter3.jpg",
+        "twitter2.jpg",
+        "twitter1.jpg",
+        "twitter4.jpg"
       ],
       tools: [
         { name: "Real-time Tweeting", icon: <FaComments /> },
@@ -233,10 +234,10 @@ const Portfolio = () => {
       technologies: ["Java Spring Boot", "MySQL", "JavaFX", "WebSocket"],
       link: "#",
       images: [
-        "/solitaire1_11zon.jpeg",
-        "/solitaire2_11zon.jpeg",
-        "/solitaire3_11zon.jpeg",
-        "/solitaire4.jpg"
+        "solitaire1.jpg",
+        "solitaire2.jpg",
+        "solitaire3.jpg",
+        "solitaire4.jpg"
       ],
       tools: [
         { name: "Customizable Themes", icon: <FaPaintBrush /> },
@@ -246,15 +247,15 @@ const Portfolio = () => {
       ]
     },
     ...Array(2).fill({
-      title: "More Projects Under development",
+      title: "Project Under development",
       description: "This is a placeholder for a future project. The details will be updated soon.",
       technologies: ["TBD"],
       link: "#",
       images: [
-        "/dummy1.jpg",
-        "/dummy2.jpg",
-        "/dummy3.jpg",
-        "/dummy4.jpg"
+        "https://img.freepik.com/free-vector/abstract-grunge-style-coming-soon-with-black-splatter_1017-26690.jpg?t=st=1742854168~exp=1742857768~hmac=c4d3b4a73db54631837ab3f64027910f0a2b8320ec826106e317d85affffb667&w=996",
+        "dummy2.jpg",
+        "dummy3.jpg",
+        "dummy4.jpg"
       ],
       tools: [
         { name: "TBD", icon: <FaCog /> }
@@ -265,7 +266,7 @@ const Portfolio = () => {
   return (
     <div className="portfolio">
       <div className="portfolio-block1">
-        <img src="/portfolioblock1.jpg" alt="Portfolio Showcase" className="portfolio-image" />
+        <img src="portfolioblock1.jpg" alt="Portfolio Showcase" className="portfolio-image" />
       </div>
 
       <section className="projects-section">
