@@ -17,7 +17,7 @@ const Footer = () => {
           </p>
           <p>
             <a href="tel:+4162387373" className="footer-phone">
-              Call Us: +92 3043638933
+              Call Us: +92 3231559163
             </a>
           </p>
         </div>
@@ -99,7 +99,7 @@ const Footer = () => {
             </li>
             <li>
               <i className="fas fa-phone-alt"></i>{" "}
-              <a href="tel:+14162387373">+92 3043638933</a>
+              <a href="tel:+14162387373">+92 3231559163</a>
             </li>
             <li>
               <i className="fas fa-clock"></i> Mon - Sun: 7 AM - 11 PM
@@ -122,7 +122,7 @@ const Footer = () => {
           <p>
             Powered by{" "}
             <a
-              href="https://techprimesolution.com"
+              href="https://techprimesolution-frontend.onrender.com/"
               target="_blank"
               rel="noreferrer"
             >

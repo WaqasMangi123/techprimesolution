@@ -175,20 +175,20 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Second Block - Services Section */}
-      <div className="services-container">
-        <h2 className="section-title">Our Services</h2>
-        <div className="services-grid">
-          {services.map((service, index) => (
-            <div key={index} className="service-card">
-              <div className="service-icon">{service.icon}</div>
-              <h3 className="service-title">{service.title}</h3>
-              <p className="service-description">{service.description}</p>
-              <button className="service-btn">Read More</button>
-            </div>
-          ))}
-        </div>
+     {/* Second Block - Services Section */}
+<div className="services-container">
+  <h2 className="section-title">Our Services</h2>
+  <div className="services-grid">
+    {services.map((service, index) => (
+      <div key={index} className="service-card">
+        <div className="service-icon">{service.icon}</div>
+        <h3 className="service-title">{service.title}</h3>
+        <p className="service-description">{service.description}</p>
+        <Link to="/services" className="service-btn">Read More</Link>
       </div>
+    ))}
+  </div>
+</div>
 
       {/* Third Block - Unique Additional Section */}
 <div className="unique-additional-section">
