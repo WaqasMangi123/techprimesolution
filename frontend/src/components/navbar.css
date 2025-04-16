@@ -515,11 +515,11 @@ body {
     }
 
     .logo {
-        height: 36px;
+        height: 59px;
     }
     
     .navbar.scrolled .logo {
-        height: 34px;
+        height: 54px;
     }
 }
 
